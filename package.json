@@ -1,9 +1,9 @@
 {
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "name": "angular-phonecat",
-  "description": "A tutorial application for AngularJS",
-  "repository": "https://github.com/angular/angular-phonecat",
+  "name": "gamedb-web",
+  "description": "gamedb",
+  "repository": "https://github.com/ro4tub/gamedb_web",
   "license": "MIT",
   "devDependencies": {
     "karma": "^0.12.16",

@@ -1,8 +1,8 @@
 {
-  "name": "angular-phonecat",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-phonecat",
+  "name": "gamedb-web",
+  "description": "gamedb",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ro4tub/gamedb_web",
   "license": "MIT",
   "private": true,
   "dependencies": {
