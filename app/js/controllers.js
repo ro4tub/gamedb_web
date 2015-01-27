@@ -4,18 +4,20 @@
 
 var gamedbControllers = angular.module('gamedbControllers', []);
 
-gamedbControllers.controller('PhoneListCtrl', ['$scope', 'Game',
-  function($scope, Game) {
-    $scope.games = Game.query();
+gamedbControllers.controller('GameSearchCtrl', ['$scope', 'GameSearch',
+  function($scope, GameSearch) {
+	  $scope.games = [];
+	  $scope.submit = function () {
+		  if($scope.text) {
+		  	 // rest查询
+		     $scope.games = GameSearch.query({keyword: $scope.text});
+		  }
+	  }	
   }]);
 
 gamedbControllers.controller('GameDetailCtrl', ['$scope', '$routeParams', 'Game',
   function($scope, $routeParams, Game) {
     $scope.game = Game.get({gameId: $routeParams.gameId}, function(game) {
-      $scope.mainImageUrl = game.images[0];
+	  	$scope.markdown = game.DetailDesc
     });
-
-    $scope.setImage = function(imageUrl) {
-      $scope.mainImageUrl = imageUrl;
-    }
   }]);

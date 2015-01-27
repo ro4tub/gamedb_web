@@ -4,6 +4,8 @@
 
 var gamedbApp = angular.module('gamedbApp', [
   'ngRoute',
+  'ngSanitize',
+  'btford.markdown',
   'gamedbAnimations',
 
   'gamedbControllers',
@@ -16,7 +18,7 @@ gamedbApp.config(['$routeProvider',
     $routeProvider.
       when('/search', {
         templateUrl: 'partials/game-search.html',
-        controller: 'PhoneListCtrl'
+        controller: 'GameSearchCtrl'
       }).
       when('/games/:gameId', {
         templateUrl: 'partials/game-detail.html',
