@@ -15,7 +15,7 @@
       <ul class="phones">
         <li ng-repeat="game in games"
             class="thumbnail phone-listing">
-          <a href="#/games/{{game.UrlName}}" target="_blank" class="thumb"><img ng-src="img/games/220x220/{{game.Pic}}"></a>
+          <a href="#/games/{{game.UrlName}}" target="_blank" class="thumb"><img ng-src="{{game.Pic}}"></a>
           <a href="#/games/{{game.UrlName}}" target="_blank">{{game.Name}}</a>
           <p>{{game.SimpleDesc}}</p>
         </li>
