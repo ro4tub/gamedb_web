@@ -1,26 +1,29 @@
 <div class="container-fluid">
-  <div class="row" ng-controller="GameSearchCtrl">
-    <div class="col-md-2">
-      <!--Sidebar content-->
-	<form ng-submit="submit()">
-	  Search:
-	  <input type="text" ng-model="text" name="text" />
-	  <input type="submit" id="submit" value="Submit" />
-	</form>
-
-    </div>
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <ul class="phones">
-        <li ng-repeat="game in games"
-            class="thumbnail phone-listing">
-          <a href="#/games/{{game.UrlName}}" target="_blank" class="thumb"><img ng-src="{{game.Pic}}"></a>
-          <a href="#/games/{{game.UrlName}}" target="_blank">{{game.Name}}</a>
-          <p>{{game.SimpleDesc}}</p>
-        </li>
-      </ul>
-
-    </div>
-  </div>
+	<div class="row" ng-controller="GameSearchCtrl">
+		<div>
+			<!--Sidebar content-->
+			<form ng-submit="submit()">
+			Search:
+			<input type="text" ng-model="text" name="text"/>
+			<input type="submit" id="submit" value="Submit" />
+			</form>
+			
+			<p>
+			您可以搜索任何关键字，何不试试搜索 Final, Racing, Xbox, 360, 斗士 这些关键字？<a href="demo.html">(sample)</a>
+			</p>
+		</div>
+		<div>
+			<!--Body content-->
+			<div id="container" class="container js-isotope" data-isotope-options='{ "itemSelector": ".item" }'>
+				<div ng-repeat="game in games" class="item thumbnail">
+					<div class="title"><a href="#/games/{{game.UrlName}}" target="_blank">{{game.Name}}</a></div>
+					<div>
+						<a href="#/games/{{game.UrlName}}" class="thumb" target="_blank" ><img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}"/></a>
+						<div class="description">{{game.SimpleDesc}}</div>
+					</div>
+				</div>
+			</div>
+			<!-- #container -->
+		</div>
+	</div>
 </div>
