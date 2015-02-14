@@ -1,13 +1,14 @@
-<div class="phone-images">
-  <img ng-src="{{game.Pic}}"
-       class="phone">
+<div class="title">
+<h2>{{game.Name}}</h2>
 </div>
 
-<h1>{{game.Name}}</h1>
+<div class="description">{{game.SimpleDesc}}</div>
+
+<div class="game-images">
+  <img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" class="game">
+</div>
 
 <p>
 	<div btf-markdown="markdown">
 	</div>
 </p>
-
-
