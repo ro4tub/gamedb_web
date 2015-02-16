@@ -1,265 +1,276 @@
 <div class="container-fluid">
+
+    <div ng-init=
+      "categoryList=[
+	  {label:' -- All Categories --', value:'0'}
+	  ,{label:'Action ', value:'54'}
+	  ,{label:'Action &gt;&gt; Arcade ', value:'289'}
+	  ,{label:'Action &gt;&gt; Beat-\'Em-Up ', value:'318'}
+	  ,{label:'Action &gt;&gt; Beat-\'Em-Up &gt;&gt; 2D ', value:'160'}
+	  ,{label:'Action &gt;&gt; Beat-\'Em-Up &gt;&gt; 3D ', value:'216'}
+	  ,{label:'Action &gt;&gt; Fighting ', value:'57'}
+	  ,{label:'Action &gt;&gt; Fighting &gt;&gt; 2D ', value:'86'}
+	  ,{label:'Action &gt;&gt; Fighting &gt;&gt; 3D ', value:'87'}
+	  ,{label:'Action &gt;&gt; General ', value:'250'}
+	  ,{label:'Action &gt;&gt; Pinball ', value:'114'}
+	  ,{label:'Action &gt;&gt; Platformer ', value:'56'}
+	  ,{label:'Action &gt;&gt; Platformer &gt;&gt; 2D ', value:'84'}
+	  ,{label:'Action &gt;&gt; Platformer &gt;&gt; 3D ', value:'85'}
+	  ,{label:'Action &gt;&gt; Rhythm ', value:'63'}
+	  ,{label:'Action &gt;&gt; Rhythm &gt;&gt; Dancing ', value:'158'}
+	  ,{label:'Action &gt;&gt; Rhythm &gt;&gt; Music ', value:'159'}
+	  ,{label:'Action &gt;&gt; Shooter ', value:'55'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; First-Person ', value:'79'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; First-Person &gt;&gt; Arcade ', value:'152'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; First-Person &gt;&gt; Tactical ', value:'156'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; Light Gun ', value:'239'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; Rail ', value:'81'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; Shoot-\'Em-Up ', value:'313'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; Shoot-\'Em-Up &gt;&gt; Horizontal ', value:'185'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; Shoot-\'Em-Up &gt;&gt; Top-Down ', value:'272'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; Shoot-\'Em-Up &gt;&gt; Vertical ', value:'83'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; Third-Person ', value:'80'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; Third-Person &gt;&gt; Arcade ', value:'182'}
+	  ,{label:'Action &gt;&gt; Shooter &gt;&gt; Third-Person &gt;&gt; Tactical ', value:'187'}
+	  ,{label:'Action Adventure ', value:'163'}
+	  ,{label:'Action Adventure &gt;&gt; General ', value:'290'}
+	  ,{label:'Action Adventure &gt;&gt; Linear ', value:'293'}
+	  ,{label:'Action Adventure &gt;&gt; Open-World ', value:'292'}
+	  ,{label:'Action Adventure &gt;&gt; Sandbox ', value:'291'}
+	  ,{label:'Action Adventure &gt;&gt; Survival ', value:'164'}
+	  ,{label:'Adventure ', value:'50'}
+	  ,{label:'Adventure &gt;&gt; 3D ', value:'77'}
+	  ,{label:'Adventure &gt;&gt; 3D &gt;&gt; First-Person ', value:'190'}
+	  ,{label:'Adventure &gt;&gt; 3D &gt;&gt; Third-Person ', value:'192'}
+	  ,{label:'Adventure &gt;&gt; General ', value:'251'}
+	  ,{label:'Adventure &gt;&gt; Point-and-Click ', value:'295'}
+	  ,{label:'Adventure &gt;&gt; Text ', value:'262'}
+	  ,{label:'Adventure &gt;&gt; Visual Novel ', value:'294'}
+	  ,{label:'Hardware ', value:'263'}
+	  ,{label:'Hardware &gt;&gt; Console ', value:'264'}
+	  ,{label:'Hardware &gt;&gt; General ', value:'265'}
+	  ,{label:'Miscellaneous ', value:'49'}
+	  ,{label:'Miscellaneous &gt;&gt; Application ', value:'277'}
+	  ,{label:'Miscellaneous &gt;&gt; Board / Card Game ', value:'227'}
+	  ,{label:'Miscellaneous &gt;&gt; Compilation ', value:'233'}
+	  ,{label:'Miscellaneous &gt;&gt; Demo Disc ', value:'280'}
+	  ,{label:'Miscellaneous &gt;&gt; Edutainment ', value:'275'}
+	  ,{label:'Miscellaneous &gt;&gt; Exercise / Fitness ', value:'287'}
+	  ,{label:'Miscellaneous &gt;&gt; Gambling ', value:'113'}
+	  ,{label:'Miscellaneous &gt;&gt; General ', value:'256'}
+	  ,{label:'Miscellaneous &gt;&gt; Party / Minigame ', value:'181'}
+	  ,{label:'Miscellaneous &gt;&gt; Trivia / Game Show ', value:'224'}
+	  ,{label:'Puzzle ', value:'173'}
+	  ,{label:'Puzzle &gt;&gt; Action ', value:'282'}
+	  ,{label:'Puzzle &gt;&gt; General ', value:'281'}
+	  ,{label:'Puzzle &gt;&gt; Hidden Object ', value:'286'}
+	  ,{label:'Puzzle &gt;&gt; Logic ', value:'285'}
+	  ,{label:'Puzzle &gt;&gt; Matching ', value:'283'}
+	  ,{label:'Puzzle &gt;&gt; Stacking ', value:'284'}
+	  ,{label:'Racing ', value:'47'}
+	  ,{label:'Racing &gt;&gt; Arcade ', value:'314'}
+	  ,{label:'Racing &gt;&gt; Arcade &gt;&gt; Automobile ', value:'232'}
+	  ,{label:'Racing &gt;&gt; Arcade &gt;&gt; Futuristic ', value:'139'}
+	  ,{label:'Racing &gt;&gt; Arcade &gt;&gt; Other ', value:'235'}
+	  ,{label:'Racing &gt;&gt; General ', value:'252'}
+	  ,{label:'Racing &gt;&gt; Simulation ', value:'315'}
+	  ,{label:'Racing &gt;&gt; Simulation &gt;&gt; Automobile ', value:'138'}
+	  ,{label:'Racing &gt;&gt; Simulation &gt;&gt; Other ', value:'274'}
+	  ,{label:'Role-Playing ', value:'48'}
+	  ,{label:'Role-Playing &gt;&gt; Action RPG ', value:'73'}
+	  ,{label:'Role-Playing &gt;&gt; General ', value:'257'}
+	  ,{label:'Role-Playing &gt;&gt; Japanese-Style ', value:'71'}
+	  ,{label:'Role-Playing &gt;&gt; Massively Multiplayer ', value:'75'}
+	  ,{label:'Role-Playing &gt;&gt; Roguelike ', value:'296'}
+	  ,{label:'Role-Playing &gt;&gt; Trainer ', value:'297'}
+	  ,{label:'Role-Playing &gt;&gt; Western-Style ', value:'72'}
+	  ,{label:'Simulation ', value:'46'}
+	  ,{label:'Simulation &gt;&gt; Flight ', value:'68'}
+	  ,{label:'Simulation &gt;&gt; Flight &gt;&gt; Civilian ', value:'157'}
+	  ,{label:'Simulation &gt;&gt; Flight &gt;&gt; Combat ', value:'130'}
+	  ,{label:'Simulation &gt;&gt; General ', value:'255'}
+	  ,{label:'Simulation &gt;&gt; Marine ', value:'317'}
+	  ,{label:'Simulation &gt;&gt; Marine &gt;&gt; Civilian ', value:'126'}
+	  ,{label:'Simulation &gt;&gt; Marine &gt;&gt; Combat ', value:'125'}
+	  ,{label:'Simulation &gt;&gt; Space ', value:'69'}
+	  ,{label:'Simulation &gt;&gt; Space &gt;&gt; Civilian ', value:'133'}
+	  ,{label:'Simulation &gt;&gt; Space &gt;&gt; Combat ', value:'132'}
+	  ,{label:'Simulation &gt;&gt; Vehicle ', value:'316'}
+	  ,{label:'Simulation &gt;&gt; Vehicle &gt;&gt; Civilian ', value:'298'}
+	  ,{label:'Simulation &gt;&gt; Vehicle &gt;&gt; Combat ', value:'124'}
+	  ,{label:'Simulation &gt;&gt; Vehicle &gt;&gt; Train ', value:'259'}
+	  ,{label:'Simulation &gt;&gt; Virtual ', value:'311'}
+	  ,{label:'Simulation &gt;&gt; Virtual &gt;&gt; Career ', value:'300'}
+	  ,{label:'Simulation &gt;&gt; Virtual &gt;&gt; Pet ', value:'299'}
+	  ,{label:'Simulation &gt;&gt; Virtual &gt;&gt; Virtual Life ', value:'242'}
+	  ,{label:'Sports ', value:'43'}
+	  ,{label:'Sports &gt;&gt; General ', value:'254'}
+	  ,{label:'Sports &gt;&gt; Individual ', value:'92'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Athletics ', value:'231'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Biking ', value:'103'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Billiards ', value:'112'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Bowling ', value:'243'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Combat ', value:'312'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Combat &gt;&gt; Boxing / Martial Arts ', value:'104'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Combat &gt;&gt; Wrestling ', value:'93'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Golf ', value:'98'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Golf &gt;&gt; Arcade ', value:'206'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Golf &gt;&gt; Sim ', value:'207'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Horse Racing ', value:'278'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Nature ', value:'108'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Nature &gt;&gt; Fishing ', value:'109'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Nature &gt;&gt; Hunting ', value:'110'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Other ', value:'246'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Skate / Skateboard ', value:'102'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Ski / Snowboard ', value:'273'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Surf / Wakeboard ', value:'238'}
+	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Tennis ', value:'101'}
+	  ,{label:'Sports &gt;&gt; Team ', value:'91'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Baseball ', value:'94'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Baseball &gt;&gt; Arcade ', value:'200'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Baseball &gt;&gt; Sim ', value:'201'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Basketball ', value:'95'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Basketball &gt;&gt; Arcade ', value:'202'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Basketball &gt;&gt; Sim ', value:'203'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Cricket ', value:'258'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Football ', value:'97'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Football &gt;&gt; Arcade ', value:'204'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Football &gt;&gt; Sim ', value:'205'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Futuristic ', value:'107'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Ice Hockey ', value:'99'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Ice Hockey &gt;&gt; Arcade ', value:'208'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Ice Hockey &gt;&gt; Sim ', value:'209'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Other ', value:'310'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Rugby ', value:'244'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Soccer ', value:'100'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Arcade ', value:'210'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Management ', value:'212'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Sim ', value:'211'}
+	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Volleyball ', value:'105'}
+	  ,{label:'Strategy ', value:'45'}
+	  ,{label:'Strategy &gt;&gt; General ', value:'253'}
+	  ,{label:'Strategy &gt;&gt; Management ', value:'60'}
+	  ,{label:'Strategy &gt;&gt; Management &gt;&gt; Business / Tycoon ', value:'220'}
+	  ,{label:'Strategy &gt;&gt; Management &gt;&gt; Government ', value:'123'}
+	  ,{label:'Strategy &gt;&gt; Real-Time ', value:'58'}
+	  ,{label:'Strategy &gt;&gt; Real-Time &gt;&gt; Command ', value:'302'}
+	  ,{label:'Strategy &gt;&gt; Real-Time &gt;&gt; Defense ', value:'303'}
+	  ,{label:'Strategy &gt;&gt; Real-Time &gt;&gt; General ', value:'301'}
+	  ,{label:'Strategy &gt;&gt; Real-Time &gt;&gt; MOBA ', value:'288'}
+	  ,{label:'Strategy &gt;&gt; Real-Time &gt;&gt; Tactics ', value:'304'}
+	  ,{label:'Strategy &gt;&gt; Turn-Based ', value:'59'}
+	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; 4X ', value:'306'}
+	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; Artillery ', value:'307'}
+	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; Card Battle ', value:'240'}
+	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; General ', value:'305'}
+	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; Tactics ', value:'308'}
+      ] ">
+	</div>	
+    <div ng-init=
+      "releaseList=[
+	  {label:'at any time', value:'0'}
+	  ,{label:'in the past', value:'1'}
+	  ,{label:'in the last month', value:'2'}
+	  ,{label:'in the last three months', value:'3'}
+	  ,{label:'in the last six months', value:'4'}
+	  ,{label:'in the last year', value:'5'}
+	  ,{label:'in the future', value:'6'}
+	  ,{label:'in 2015', value:'2015'}
+	  ,{label:'in 2014', value:'2014'}
+	  ,{label:'in 2013', value:'2013'}
+	  ,{label:'in 2012', value:'2012'}
+	  ,{label:'in 2011', value:'2011'}
+	  ,{label:'in 2010', value:'2010'}
+	  ,{label:'in 2009', value:'2009'}
+	  ,{label:'in 2008', value:'2008'}
+	  ,{label:'in 2007', value:'2007'}
+	  ,{label:'in 2006', value:'2006'}
+	  ,{label:'in 2005', value:'2005'}
+	  ,{label:'in 2004', value:'2004'}
+	  ,{label:'in 2003', value:'2003'}
+	  ,{label:'in 2002', value:'2002'}
+	  ,{label:'in 2001', value:'2001'}
+	  ,{label:'in 2000', value:'2000'}
+	  ,{label:'in 1999', value:'1999'}
+	  ,{label:'in 1998', value:'1998'}
+	  ,{label:'in 1997', value:'1997'}
+	  ,{label:'in 1996', value:'1996'}
+	  ,{label:'in 1995', value:'1995'}
+	  ,{label:'in 1994', value:'1994'}
+	  ,{label:'in 1993', value:'1993'}
+	  ,{label:'in 1992', value:'1992'}
+	  ,{label:'in 1991', value:'1991'}
+	  ,{label:'in 1990', value:'1990'}
+	  ,{label:'in 1989', value:'1989'}
+	  ,{label:'in 1988', value:'1988'}
+	  ,{label:'in 1987', value:'1987'}
+	  ,{label:'in 1986', value:'1986'}
+	  ,{label:'in 1985', value:'1985'}
+	  ,{label:'in 1984', value:'1984'}
+	  ,{label:'in 1983', value:'1983'}
+	  ,{label:'in 1982', value:'1982'}
+	  ,{label:'in 1981', value:'1981'}
+	  ,{label:'in 1980', value:'1980'}
+	  ,{label:'in 1979', value:'1979'}
+	  ,{label:'in 1978', value:'1978'}
+	  ,{label:'in 1977', value:'1977'}
+	  ,{label:'in 1976', value:'1976'}
+	  ,{label:'in 1975', value:'1975'}
+	  ,{label:'in 1974', value:'1974'}
+	  ,{label:'in 1973', value:'1973'}
+	  ,{label:'in 1972', value:'1972'}
+	  ,{label:'in 1971', value:'1971'}
+	  ,{label:'in 1970', value:'1970'}
+      ] ">
+	</div>
+    <div ng-init=
+      "platformList=[
+	  {label:'All Platforms', value:''}
+	  ,{label:'3DS', value:'3ds'}
+	  ,{label:'Android', value:'android'}
+	  ,{label:'Dreamcast', value:'dreamcast'}
+	  ,{label:'DS', value:'ds'}
+	  ,{label:'Game Boy', value:'gameboy'}
+	  ,{label:'Game Boy Advance', value:'gba'}
+	  ,{label:'Game Boy Color', value:'gbc'}
+	  ,{label:'GameCube', value:'gamecube'}
+	  ,{label:'Genesis', value:'genesis'}
+	  ,{label:'iOS (iPhone/iPad)', value:'iphone'}
+	  ,{label:'Macintosh', value:'mac'}
+	  ,{label:'Mobile', value:'mobile'}
+	  ,{label:'N-Gage', value:'ngage'}
+	  ,{label:'Nintendo 64', value:'n64'}
+	  ,{label:'Ouya', value:'ouya'}
+	  ,{label:'PC', value:'pc'}
+	  ,{label:'PlayStation', value:'ps'}
+	  ,{label:'PlayStation 2', value:'ps2'}
+	  ,{label:'PlayStation 3', value:'ps3'}
+	  ,{label:'PlayStation 4', value:'ps4'}
+	  ,{label:'PlayStation Vita', value:'vita'}
+	  ,{label:'PSP', value:'psp'}
+	  ,{label:'Saturn', value:'saturn'}
+	  ,{label:'Sega CD', value:'segacd'}
+	  ,{label:'Super Nintendo', value:'snes'}
+	  ,{label:'Wii', value:'wii'}
+	  ,{label:'Wii U', value:'wii-u'}
+	  ,{label:'Xbox', value:'xbox'}
+	  ,{label:'Xbox 360', value:'xbox360'}
+	  ,{label:'Xbox One', value:'xboxone'}
+      ] ">
+	</div>
+	
+	
 	<div class="row" ng-controller="GameSearchCtrl">
 		<div>
-			<!--Sidebar content-->
 			<p>
 			您可以搜索任何关键字，何不试试搜索 Final, Racing, Xbox, 360, 天天, 全民 这些关键字？<a href="demo.html" target="_blank">(sample)</a>
 			</p>			
 			<form ng-submit="submit()">
-
-			游戏类型: <select name="cat" size="1"><option label=" -- All Categories --" value="0" selected="selected"> -- All Categories --
-<option label="Action " value="54">Action 
-<option label="Action &gt;&gt; Arcade " value="289">Action &gt;&gt; Arcade 
-<option label="Action &gt;&gt; Beat-'Em-Up " value="318">Action &gt;&gt; Beat-'Em-Up 
-<option label="Action &gt;&gt; Beat-'Em-Up &gt;&gt; 2D " value="160">Action &gt;&gt; Beat-'Em-Up &gt;&gt; 2D 
-<option label="Action &gt;&gt; Beat-'Em-Up &gt;&gt; 3D " value="216">Action &gt;&gt; Beat-'Em-Up &gt;&gt; 3D 
-<option label="Action &gt;&gt; Fighting " value="57">Action &gt;&gt; Fighting 
-<option label="Action &gt;&gt; Fighting &gt;&gt; 2D " value="86">Action &gt;&gt; Fighting &gt;&gt; 2D 
-<option label="Action &gt;&gt; Fighting &gt;&gt; 3D " value="87">Action &gt;&gt; Fighting &gt;&gt; 3D 
-<option label="Action &gt;&gt; General " value="250">Action &gt;&gt; General 
-<option label="Action &gt;&gt; Pinball " value="114">Action &gt;&gt; Pinball 
-<option label="Action &gt;&gt; Platformer " value="56">Action &gt;&gt; Platformer 
-<option label="Action &gt;&gt; Platformer &gt;&gt; 2D " value="84">Action &gt;&gt; Platformer &gt;&gt; 2D 
-<option label="Action &gt;&gt; Platformer &gt;&gt; 3D " value="85">Action &gt;&gt; Platformer &gt;&gt; 3D 
-<option label="Action &gt;&gt; Rhythm " value="63">Action &gt;&gt; Rhythm 
-<option label="Action &gt;&gt; Rhythm &gt;&gt; Dancing " value="158">Action &gt;&gt; Rhythm &gt;&gt; Dancing 
-<option label="Action &gt;&gt; Rhythm &gt;&gt; Music " value="159">Action &gt;&gt; Rhythm &gt;&gt; Music 
-<option label="Action &gt;&gt; Shooter " value="55">Action &gt;&gt; Shooter 
-<option label="Action &gt;&gt; Shooter &gt;&gt; First-Person " value="79">Action &gt;&gt; Shooter &gt;&gt; First-Person 
-<option label="Action &gt;&gt; Shooter &gt;&gt; First-Person &gt;&gt; Arcade " value="152">Action &gt;&gt; Shooter &gt;&gt; First-Person &gt;&gt; Arcade 
-<option label="Action &gt;&gt; Shooter &gt;&gt; First-Person &gt;&gt; Tactical " value="156">Action &gt;&gt; Shooter &gt;&gt; First-Person &gt;&gt; Tactical 
-<option label="Action &gt;&gt; Shooter &gt;&gt; Light Gun " value="239">Action &gt;&gt; Shooter &gt;&gt; Light Gun 
-<option label="Action &gt;&gt; Shooter &gt;&gt; Rail " value="81">Action &gt;&gt; Shooter &gt;&gt; Rail 
-<option label="Action &gt;&gt; Shooter &gt;&gt; Shoot-'Em-Up " value="313">Action &gt;&gt; Shooter &gt;&gt; Shoot-'Em-Up 
-<option label="Action &gt;&gt; Shooter &gt;&gt; Shoot-'Em-Up &gt;&gt; Horizontal " value="185">Action &gt;&gt; Shooter &gt;&gt; Shoot-'Em-Up &gt;&gt; Horizontal 
-<option label="Action &gt;&gt; Shooter &gt;&gt; Shoot-'Em-Up &gt;&gt; Top-Down " value="272">Action &gt;&gt; Shooter &gt;&gt; Shoot-'Em-Up &gt;&gt; Top-Down 
-<option label="Action &gt;&gt; Shooter &gt;&gt; Shoot-'Em-Up &gt;&gt; Vertical " value="83">Action &gt;&gt; Shooter &gt;&gt; Shoot-'Em-Up &gt;&gt; Vertical 
-<option label="Action &gt;&gt; Shooter &gt;&gt; Third-Person " value="80">Action &gt;&gt; Shooter &gt;&gt; Third-Person 
-<option label="Action &gt;&gt; Shooter &gt;&gt; Third-Person &gt;&gt; Arcade " value="182">Action &gt;&gt; Shooter &gt;&gt; Third-Person &gt;&gt; Arcade 
-<option label="Action &gt;&gt; Shooter &gt;&gt; Third-Person &gt;&gt; Tactical " value="187">Action &gt;&gt; Shooter &gt;&gt; Third-Person &gt;&gt; Tactical 
-<option label="Action Adventure " value="163">Action Adventure 
-<option label="Action Adventure &gt;&gt; General " value="290">Action Adventure &gt;&gt; General 
-<option label="Action Adventure &gt;&gt; Linear " value="293">Action Adventure &gt;&gt; Linear 
-<option label="Action Adventure &gt;&gt; Open-World " value="292">Action Adventure &gt;&gt; Open-World 
-<option label="Action Adventure &gt;&gt; Sandbox " value="291">Action Adventure &gt;&gt; Sandbox 
-<option label="Action Adventure &gt;&gt; Survival " value="164">Action Adventure &gt;&gt; Survival 
-<option label="Adventure " value="50">Adventure 
-<option label="Adventure &gt;&gt; 3D " value="77">Adventure &gt;&gt; 3D 
-<option label="Adventure &gt;&gt; 3D &gt;&gt; First-Person " value="190">Adventure &gt;&gt; 3D &gt;&gt; First-Person 
-<option label="Adventure &gt;&gt; 3D &gt;&gt; Third-Person " value="192">Adventure &gt;&gt; 3D &gt;&gt; Third-Person 
-<option label="Adventure &gt;&gt; General " value="251">Adventure &gt;&gt; General 
-<option label="Adventure &gt;&gt; Point-and-Click " value="295">Adventure &gt;&gt; Point-and-Click 
-<option label="Adventure &gt;&gt; Text " value="262">Adventure &gt;&gt; Text 
-<option label="Adventure &gt;&gt; Visual Novel " value="294">Adventure &gt;&gt; Visual Novel 
-<option label="Hardware " value="263">Hardware 
-<option label="Hardware &gt;&gt; Console " value="264">Hardware &gt;&gt; Console 
-<option label="Hardware &gt;&gt; General " value="265">Hardware &gt;&gt; General 
-<option label="Miscellaneous " value="49">Miscellaneous 
-<option label="Miscellaneous &gt;&gt; Application " value="277">Miscellaneous &gt;&gt; Application 
-<option label="Miscellaneous &gt;&gt; Board / Card Game " value="227">Miscellaneous &gt;&gt; Board / Card Game 
-<option label="Miscellaneous &gt;&gt; Compilation " value="233">Miscellaneous &gt;&gt; Compilation 
-<option label="Miscellaneous &gt;&gt; Demo Disc " value="280">Miscellaneous &gt;&gt; Demo Disc 
-<option label="Miscellaneous &gt;&gt; Edutainment " value="275">Miscellaneous &gt;&gt; Edutainment 
-<option label="Miscellaneous &gt;&gt; Exercise / Fitness " value="287">Miscellaneous &gt;&gt; Exercise / Fitness 
-<option label="Miscellaneous &gt;&gt; Gambling " value="113">Miscellaneous &gt;&gt; Gambling 
-<option label="Miscellaneous &gt;&gt; General " value="256">Miscellaneous &gt;&gt; General 
-<option label="Miscellaneous &gt;&gt; Party / Minigame " value="181">Miscellaneous &gt;&gt; Party / Minigame 
-<option label="Miscellaneous &gt;&gt; Trivia / Game Show " value="224">Miscellaneous &gt;&gt; Trivia / Game Show 
-<option label="Puzzle " value="173">Puzzle 
-<option label="Puzzle &gt;&gt; Action " value="282">Puzzle &gt;&gt; Action 
-<option label="Puzzle &gt;&gt; General " value="281">Puzzle &gt;&gt; General 
-<option label="Puzzle &gt;&gt; Hidden Object " value="286">Puzzle &gt;&gt; Hidden Object 
-<option label="Puzzle &gt;&gt; Logic " value="285">Puzzle &gt;&gt; Logic 
-<option label="Puzzle &gt;&gt; Matching " value="283">Puzzle &gt;&gt; Matching 
-<option label="Puzzle &gt;&gt; Stacking " value="284">Puzzle &gt;&gt; Stacking 
-<option label="Racing " value="47">Racing 
-<option label="Racing &gt;&gt; Arcade " value="314">Racing &gt;&gt; Arcade 
-<option label="Racing &gt;&gt; Arcade &gt;&gt; Automobile " value="232">Racing &gt;&gt; Arcade &gt;&gt; Automobile 
-<option label="Racing &gt;&gt; Arcade &gt;&gt; Futuristic " value="139">Racing &gt;&gt; Arcade &gt;&gt; Futuristic 
-<option label="Racing &gt;&gt; Arcade &gt;&gt; Other " value="235">Racing &gt;&gt; Arcade &gt;&gt; Other 
-<option label="Racing &gt;&gt; General " value="252">Racing &gt;&gt; General 
-<option label="Racing &gt;&gt; Simulation " value="315">Racing &gt;&gt; Simulation 
-<option label="Racing &gt;&gt; Simulation &gt;&gt; Automobile " value="138">Racing &gt;&gt; Simulation &gt;&gt; Automobile 
-<option label="Racing &gt;&gt; Simulation &gt;&gt; Other " value="274">Racing &gt;&gt; Simulation &gt;&gt; Other 
-<option label="Role-Playing " value="48">Role-Playing 
-<option label="Role-Playing &gt;&gt; Action RPG " value="73">Role-Playing &gt;&gt; Action RPG 
-<option label="Role-Playing &gt;&gt; General " value="257">Role-Playing &gt;&gt; General 
-<option label="Role-Playing &gt;&gt; Japanese-Style " value="71">Role-Playing &gt;&gt; Japanese-Style 
-<option label="Role-Playing &gt;&gt; Massively Multiplayer " value="75">Role-Playing &gt;&gt; Massively Multiplayer 
-<option label="Role-Playing &gt;&gt; Roguelike " value="296">Role-Playing &gt;&gt; Roguelike 
-<option label="Role-Playing &gt;&gt; Trainer " value="297">Role-Playing &gt;&gt; Trainer 
-<option label="Role-Playing &gt;&gt; Western-Style " value="72">Role-Playing &gt;&gt; Western-Style 
-<option label="Simulation " value="46">Simulation 
-<option label="Simulation &gt;&gt; Flight " value="68">Simulation &gt;&gt; Flight 
-<option label="Simulation &gt;&gt; Flight &gt;&gt; Civilian " value="157">Simulation &gt;&gt; Flight &gt;&gt; Civilian 
-<option label="Simulation &gt;&gt; Flight &gt;&gt; Combat " value="130">Simulation &gt;&gt; Flight &gt;&gt; Combat 
-<option label="Simulation &gt;&gt; General " value="255">Simulation &gt;&gt; General 
-<option label="Simulation &gt;&gt; Marine " value="317">Simulation &gt;&gt; Marine 
-<option label="Simulation &gt;&gt; Marine &gt;&gt; Civilian " value="126">Simulation &gt;&gt; Marine &gt;&gt; Civilian 
-<option label="Simulation &gt;&gt; Marine &gt;&gt; Combat " value="125">Simulation &gt;&gt; Marine &gt;&gt; Combat 
-<option label="Simulation &gt;&gt; Space " value="69">Simulation &gt;&gt; Space 
-<option label="Simulation &gt;&gt; Space &gt;&gt; Civilian " value="133">Simulation &gt;&gt; Space &gt;&gt; Civilian 
-<option label="Simulation &gt;&gt; Space &gt;&gt; Combat " value="132">Simulation &gt;&gt; Space &gt;&gt; Combat 
-<option label="Simulation &gt;&gt; Vehicle " value="316">Simulation &gt;&gt; Vehicle 
-<option label="Simulation &gt;&gt; Vehicle &gt;&gt; Civilian " value="298">Simulation &gt;&gt; Vehicle &gt;&gt; Civilian 
-<option label="Simulation &gt;&gt; Vehicle &gt;&gt; Combat " value="124">Simulation &gt;&gt; Vehicle &gt;&gt; Combat 
-<option label="Simulation &gt;&gt; Vehicle &gt;&gt; Train " value="259">Simulation &gt;&gt; Vehicle &gt;&gt; Train 
-<option label="Simulation &gt;&gt; Virtual " value="311">Simulation &gt;&gt; Virtual 
-<option label="Simulation &gt;&gt; Virtual &gt;&gt; Career " value="300">Simulation &gt;&gt; Virtual &gt;&gt; Career 
-<option label="Simulation &gt;&gt; Virtual &gt;&gt; Pet " value="299">Simulation &gt;&gt; Virtual &gt;&gt; Pet 
-<option label="Simulation &gt;&gt; Virtual &gt;&gt; Virtual Life " value="242">Simulation &gt;&gt; Virtual &gt;&gt; Virtual Life 
-<option label="Sports " value="43">Sports 
-<option label="Sports &gt;&gt; General " value="254">Sports &gt;&gt; General 
-<option label="Sports &gt;&gt; Individual " value="92">Sports &gt;&gt; Individual 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Athletics " value="231">Sports &gt;&gt; Individual &gt;&gt; Athletics 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Biking " value="103">Sports &gt;&gt; Individual &gt;&gt; Biking 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Billiards " value="112">Sports &gt;&gt; Individual &gt;&gt; Billiards 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Bowling " value="243">Sports &gt;&gt; Individual &gt;&gt; Bowling 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Combat " value="312">Sports &gt;&gt; Individual &gt;&gt; Combat 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Combat &gt;&gt; Boxing / Martial Arts " value="104">Sports &gt;&gt; Individual &gt;&gt; Combat &gt;&gt; Boxing / Martial Arts 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Combat &gt;&gt; Wrestling " value="93">Sports &gt;&gt; Individual &gt;&gt; Combat &gt;&gt; Wrestling 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Golf " value="98">Sports &gt;&gt; Individual &gt;&gt; Golf 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Golf &gt;&gt; Arcade " value="206">Sports &gt;&gt; Individual &gt;&gt; Golf &gt;&gt; Arcade 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Golf &gt;&gt; Sim " value="207">Sports &gt;&gt; Individual &gt;&gt; Golf &gt;&gt; Sim 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Horse Racing " value="278">Sports &gt;&gt; Individual &gt;&gt; Horse Racing 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Nature " value="108">Sports &gt;&gt; Individual &gt;&gt; Nature 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Nature &gt;&gt; Fishing " value="109">Sports &gt;&gt; Individual &gt;&gt; Nature &gt;&gt; Fishing 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Nature &gt;&gt; Hunting " value="110">Sports &gt;&gt; Individual &gt;&gt; Nature &gt;&gt; Hunting 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Other " value="246">Sports &gt;&gt; Individual &gt;&gt; Other 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Skate / Skateboard " value="102">Sports &gt;&gt; Individual &gt;&gt; Skate / Skateboard 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Ski / Snowboard " value="273">Sports &gt;&gt; Individual &gt;&gt; Ski / Snowboard 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Surf / Wakeboard " value="238">Sports &gt;&gt; Individual &gt;&gt; Surf / Wakeboard 
-<option label="Sports &gt;&gt; Individual &gt;&gt; Tennis " value="101">Sports &gt;&gt; Individual &gt;&gt; Tennis 
-<option label="Sports &gt;&gt; Team " value="91">Sports &gt;&gt; Team 
-<option label="Sports &gt;&gt; Team &gt;&gt; Baseball " value="94">Sports &gt;&gt; Team &gt;&gt; Baseball 
-<option label="Sports &gt;&gt; Team &gt;&gt; Baseball &gt;&gt; Arcade " value="200">Sports &gt;&gt; Team &gt;&gt; Baseball &gt;&gt; Arcade 
-<option label="Sports &gt;&gt; Team &gt;&gt; Baseball &gt;&gt; Sim " value="201">Sports &gt;&gt; Team &gt;&gt; Baseball &gt;&gt; Sim 
-<option label="Sports &gt;&gt; Team &gt;&gt; Basketball " value="95">Sports &gt;&gt; Team &gt;&gt; Basketball 
-<option label="Sports &gt;&gt; Team &gt;&gt; Basketball &gt;&gt; Arcade " value="202">Sports &gt;&gt; Team &gt;&gt; Basketball &gt;&gt; Arcade 
-<option label="Sports &gt;&gt; Team &gt;&gt; Basketball &gt;&gt; Sim " value="203">Sports &gt;&gt; Team &gt;&gt; Basketball &gt;&gt; Sim 
-<option label="Sports &gt;&gt; Team &gt;&gt; Cricket " value="258">Sports &gt;&gt; Team &gt;&gt; Cricket 
-<option label="Sports &gt;&gt; Team &gt;&gt; Football " value="97">Sports &gt;&gt; Team &gt;&gt; Football 
-<option label="Sports &gt;&gt; Team &gt;&gt; Football &gt;&gt; Arcade " value="204">Sports &gt;&gt; Team &gt;&gt; Football &gt;&gt; Arcade 
-<option label="Sports &gt;&gt; Team &gt;&gt; Football &gt;&gt; Sim " value="205">Sports &gt;&gt; Team &gt;&gt; Football &gt;&gt; Sim 
-<option label="Sports &gt;&gt; Team &gt;&gt; Futuristic " value="107">Sports &gt;&gt; Team &gt;&gt; Futuristic 
-<option label="Sports &gt;&gt; Team &gt;&gt; Ice Hockey " value="99">Sports &gt;&gt; Team &gt;&gt; Ice Hockey 
-<option label="Sports &gt;&gt; Team &gt;&gt; Ice Hockey &gt;&gt; Arcade " value="208">Sports &gt;&gt; Team &gt;&gt; Ice Hockey &gt;&gt; Arcade 
-<option label="Sports &gt;&gt; Team &gt;&gt; Ice Hockey &gt;&gt; Sim " value="209">Sports &gt;&gt; Team &gt;&gt; Ice Hockey &gt;&gt; Sim 
-<option label="Sports &gt;&gt; Team &gt;&gt; Other " value="310">Sports &gt;&gt; Team &gt;&gt; Other 
-<option label="Sports &gt;&gt; Team &gt;&gt; Rugby " value="244">Sports &gt;&gt; Team &gt;&gt; Rugby 
-<option label="Sports &gt;&gt; Team &gt;&gt; Soccer " value="100">Sports &gt;&gt; Team &gt;&gt; Soccer 
-<option label="Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Arcade " value="210">Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Arcade 
-<option label="Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Management " value="212">Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Management 
-<option label="Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Sim " value="211">Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Sim 
-<option label="Sports &gt;&gt; Team &gt;&gt; Volleyball " value="105">Sports &gt;&gt; Team &gt;&gt; Volleyball 
-<option label="Strategy " value="45">Strategy 
-<option label="Strategy &gt;&gt; General " value="253">Strategy &gt;&gt; General 
-<option label="Strategy &gt;&gt; Management " value="60">Strategy &gt;&gt; Management 
-<option label="Strategy &gt;&gt; Management &gt;&gt; Business / Tycoon " value="220">Strategy &gt;&gt; Management &gt;&gt; Business / Tycoon 
-<option label="Strategy &gt;&gt; Management &gt;&gt; Government " value="123">Strategy &gt;&gt; Management &gt;&gt; Government 
-<option label="Strategy &gt;&gt; Real-Time " value="58">Strategy &gt;&gt; Real-Time 
-<option label="Strategy &gt;&gt; Real-Time &gt;&gt; Command " value="302">Strategy &gt;&gt; Real-Time &gt;&gt; Command 
-<option label="Strategy &gt;&gt; Real-Time &gt;&gt; Defense " value="303">Strategy &gt;&gt; Real-Time &gt;&gt; Defense 
-<option label="Strategy &gt;&gt; Real-Time &gt;&gt; General " value="301">Strategy &gt;&gt; Real-Time &gt;&gt; General 
-<option label="Strategy &gt;&gt; Real-Time &gt;&gt; MOBA " value="288">Strategy &gt;&gt; Real-Time &gt;&gt; MOBA 
-<option label="Strategy &gt;&gt; Real-Time &gt;&gt; Tactics " value="304">Strategy &gt;&gt; Real-Time &gt;&gt; Tactics 
-<option label="Strategy &gt;&gt; Turn-Based " value="59">Strategy &gt;&gt; Turn-Based 
-<option label="Strategy &gt;&gt; Turn-Based &gt;&gt; 4X " value="306">Strategy &gt;&gt; Turn-Based &gt;&gt; 4X 
-<option label="Strategy &gt;&gt; Turn-Based &gt;&gt; Artillery " value="307">Strategy &gt;&gt; Turn-Based &gt;&gt; Artillery 
-<option label="Strategy &gt;&gt; Turn-Based &gt;&gt; Card Battle " value="240">Strategy &gt;&gt; Turn-Based &gt;&gt; Card Battle 
-<option label="Strategy &gt;&gt; Turn-Based &gt;&gt; General " value="305">Strategy &gt;&gt; Turn-Based &gt;&gt; General 
-<option label="Strategy &gt;&gt; Turn-Based &gt;&gt; Tactics " value="308">Strategy &gt;&gt; Turn-Based &gt;&gt; Tactics 
-</select><br/>
-			发行日期: <select name="year" size="1"><option label="at any time" value="0" selected="selected">at any time
-<option label="in the past" value="1">in the past
-<option label="in the last month" value="2">in the last month
-<option label="in the last three months" value="3">in the last three months
-<option label="in the last six months" value="4">in the last six months
-<option label="in the last year" value="5">in the last year
-<option label="in the future" value="6">in the future
-<option label="in 2015" value="2015">in 2015
-<option label="in 2014" value="2014">in 2014
-<option label="in 2013" value="2013">in 2013
-<option label="in 2012" value="2012">in 2012
-<option label="in 2011" value="2011">in 2011
-<option label="in 2010" value="2010">in 2010
-<option label="in 2009" value="2009">in 2009
-<option label="in 2008" value="2008">in 2008
-<option label="in 2007" value="2007">in 2007
-<option label="in 2006" value="2006">in 2006
-<option label="in 2005" value="2005">in 2005
-<option label="in 2004" value="2004">in 2004
-<option label="in 2003" value="2003">in 2003
-<option label="in 2002" value="2002">in 2002
-<option label="in 2001" value="2001">in 2001
-<option label="in 2000" value="2000">in 2000
-<option label="in 1999" value="1999">in 1999
-<option label="in 1998" value="1998">in 1998
-<option label="in 1997" value="1997">in 1997
-<option label="in 1996" value="1996">in 1996
-<option label="in 1995" value="1995">in 1995
-<option label="in 1994" value="1994">in 1994
-<option label="in 1993" value="1993">in 1993
-<option label="in 1992" value="1992">in 1992
-<option label="in 1991" value="1991">in 1991
-<option label="in 1990" value="1990">in 1990
-<option label="in 1989" value="1989">in 1989
-<option label="in 1988" value="1988">in 1988
-<option label="in 1987" value="1987">in 1987
-<option label="in 1986" value="1986">in 1986
-<option label="in 1985" value="1985">in 1985
-<option label="in 1984" value="1984">in 1984
-<option label="in 1983" value="1983">in 1983
-<option label="in 1982" value="1982">in 1982
-<option label="in 1981" value="1981">in 1981
-<option label="in 1980" value="1980">in 1980
-<option label="in 1979" value="1979">in 1979
-<option label="in 1978" value="1978">in 1978
-<option label="in 1977" value="1977">in 1977
-<option label="in 1976" value="1976">in 1976
-<option label="in 1975" value="1975">in 1975
-<option label="in 1974" value="1974">in 1974
-<option label="in 1973" value="1973">in 1973
-<option label="in 1972" value="1972">in 1972
-<option label="in 1971" value="1971">in 1971
-<option label="in 1970" value="1970">in 1970
-</select><br/>
-		游戏机种: <select name="site" size="1"><option label="All Platforms" value="" selected="selected">All Platforms
-<option label="3DS" value="3ds">3DS
-<option label="Android" value="android">Android
-<option label="Dreamcast" value="dreamcast">Dreamcast
-<option label="DS" value="ds">DS
-<option label="Game Boy" value="gameboy">Game Boy
-<option label="Game Boy Advance" value="gba">Game Boy Advance
-<option label="Game Boy Color" value="gbc">Game Boy Color
-<option label="GameCube" value="gamecube">GameCube
-<option label="Genesis" value="genesis">Genesis
-<option label="iOS (iPhone/iPad)" value="iphone">iOS (iPhone/iPad)
-<option label="Macintosh" value="mac">Macintosh
-<option label="Mobile" value="mobile">Mobile
-<option label="N-Gage" value="ngage">N-Gage
-<option label="Nintendo 64" value="n64">Nintendo 64
-<option label="Ouya" value="ouya">Ouya
-<option label="PC" value="pc">PC
-<option label="PlayStation" value="ps">PlayStation
-<option label="PlayStation 2" value="ps2">PlayStation 2
-<option label="PlayStation 3" value="ps3">PlayStation 3
-<option label="PlayStation 4" value="ps4">PlayStation 4
-<option label="PlayStation Vita" value="vita">PlayStation Vita
-<option label="PSP" value="psp">PSP
-<option label="Saturn" value="saturn">Saturn
-<option label="Sega CD" value="segacd">Sega CD
-<option label="Super Nintendo" value="snes">Super Nintendo
-<option label="Wii" value="wii">Wii
-<option label="Wii U" value="wii-u">Wii U
-<option label="Xbox" value="xbox">Xbox
-<option label="Xbox 360" value="xbox360">Xbox 360
-<option label="Xbox One" value="xboxone">Xbox One
-</select><br/>
-
-			Search: <input type="text" ng-model="text" name="text" size="20" value="Final"/>
-			
-			<input type="submit" id="submit" value="Search/Browse" />
+				游戏类型: <select name="cat" size="1"><option ng-repeat="x in categoryList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
+				发行日期: <select name="year" size="1"><option ng-repeat="x in releaseList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
+				游戏机种: <select name="site" size="1"><option ng-repeat="x in platformList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
+				Search: <input type="text" ng-model="text" name="text" size="20"/>
+				<input type="submit" id="submit" value="Search/Browse" />
 			</form>
 		</div>
 		<div>
@@ -274,7 +285,9 @@
 				</div>
 			</div>
 			<!-- #container -->
-		</div>
-	
+		</div> 
 	</div>
+  
 </div>
+
+
