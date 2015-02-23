@@ -16,6 +16,10 @@ var gamedbApp = angular.module('gamedbApp', [
 gamedbApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+      when('/search/:keyword', {
+        templateUrl: 'partials/game-search.html',
+        controller: 'GameSearchCtrl'
+      }).
       when('/search', {
         templateUrl: 'partials/game-search.html',
         controller: 'GameSearchCtrl'

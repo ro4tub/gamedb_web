@@ -295,7 +295,12 @@
 				<input type="submit" id="submit" value="Search/Browse" />
 			</form>
 			<p>
-			何不试试<b class="variablecolor">Final, PS3, 360, 天天, 全民</b>？<a href="demo.html" target="_blank">(sample)</a>
+			何不试试
+				<a href="index.html#/search/Final">Final</a>,
+				<a href="index.html#/search/PS3">PS3</a>,
+				<a href="index.html#/search/360">360</a>,
+				<a href="index.html#/search/天天">天天</a>,
+				<a href="index.html#/search/全民">全民</a>？<a href="demo.html" target="_blank">(sample)</a>
 			</p>			
 		</div>
 		<div>
@@ -305,8 +310,11 @@
 					data-id="{{game.Id}}"
 					data-name="{{game.Name}}"
 					data-platform="{{game.Platform}}"
+					data-genre="{{game.Genre}}"
+					data-tag="{{game.TAGs}}"
 					data-releasedate="{{game.ReleaseDate}}"
-					data-url="#/games/{{game.UrlName}}">
+					data-url="#/games/{{game.UrlName}}"
+					>
 					<div class="title fb fz3"><a href="#/games/{{game.UrlName}}" target="_blank">{{game.Name}}</a></div>
 					<div>
 						<a href="#/games/{{game.UrlName}}" class="thumb" target="_blank" ><img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';"/></a>
