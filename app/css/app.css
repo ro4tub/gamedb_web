@@ -1,7 +1,7 @@
 /* app css stylesheet */
 
 body {
-  padding: 5px;
+  padding: 0px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
   /*font-size: 13px;*/
   line-height: 1.7em;
@@ -11,7 +11,7 @@ body {
 
 
 .item .title {
-  font-family: '微软雅黑','Condiment', Lucida Sans, Verdana, Helvetica, Arial, Sans-serif;
+  font-family: '微软雅黑', 'Condiment', Lucida Sans, Verdana, Helvetica, Arial, Sans-serif;
   text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
   margin: 0.5em 0em 0.5em 0.5em;  
   border-bottom: 1px solid black;
@@ -147,7 +147,7 @@ h1 {
 
 .container2 {
   /*background: #3BF;*/
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 50px;
   position: relative;
   padding: 0px;
@@ -155,7 +155,7 @@ h1 {
 }
 
 .item {
-  width:  320px;
+  width:  290px;
   height: 230px;
   float: left;
   border: 1px solid #ccc;
@@ -173,42 +173,44 @@ h1 {
   /*font-weight: bold;*/
 }
 
+.pad45{margin-top:45px;}
+#maindiv{  padding: 5px; }
 
 @media handheld, screen and (max-width: 1720px){
-    h1 {
+    b.variablecolor {
         color: purple;
     }
-	.item {
-	  width:  290px;
-	}	
 } 
 
 @media handheld, screen and (max-width: 1180px){
-    h1 {
+    b.variablecolor {
         color: green;
     }
-	.item {
-	  width:  290px;
-	}	
 } 
 
 @media handheld, screen and (max-width: 800px){
-    h1 {
+    b.variablecolor {
         color: blue;
     }
-	.item {
-	  width:  290px;
-	}	
 }  
 
 @media handheld, screen and (max-width: 620px){
-    h1 {
+    b.variablecolor {
         color: red;
     }
 	select {
 		width: 220px;
 	}	
 	.item {
-	  width:  290px;
+		width:  260px;
+	}	 
+}
+
+@media handheld, screen and (max-width: 560px){
+    b.variablecolor {
+        color: darkgrey;
+    }
+	.item {
+		width:  290px;
 	}	 
 }

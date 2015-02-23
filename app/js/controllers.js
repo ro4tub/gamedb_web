@@ -7,6 +7,7 @@ var gamedbControllers = angular.module('gamedbControllers', []);
 gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', 'GameSearch',
   function($scope, $rootScope, GameSearch) {
 	  $scope.games = [];
+	  $scope.text = "天天";  
 	  $scope.submit = function () {
 		  if($scope.text) {
 		  	 // rest查询

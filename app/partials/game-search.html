@@ -164,6 +164,31 @@
 	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; Card Battle ', value:'240'}
 	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; General ', value:'305'}
 	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; Tactics ', value:'308'}
+	  ,{label:'角色扮演', value:'1001'}
+	  ,{label:'角色扮演 &gt;&gt; 卡牌', value:'1006'}
+	  ,{label:'跑酷躲避', value:'1002'}
+	  ,{label:'塔防', value:'1003'}
+	  ,{label:'消除', value:'1004'}
+	  ,{label:'射击', value:'1005'}
+	  ,{label:'射击 &gt;&gt; 飞行', value:'1016'}
+	  ,{label:'棋牌', value:'1007'}
+	  ,{label:'其他', value:'1008'}
+	  ,{label:'策略', value:'1009'}
+	  ,{label:'动作', value:'1010'}
+	  ,{label:'模拟', value:'1012'}
+	  ,{label:'模拟 &gt;&gt; 经营', value:'1022'}
+	  ,{label:'竞速', value:'1015'}
+	  ,{label:'儿童', value:'1018'}
+	  ,{label:'恋爱养成', value:'1020'}
+	  ,{label:'冒险解谜', value:'1021'}
+	  ,{label:'体育', value:'1017'}
+	  ,{label:'体育 &gt;&gt; 竞技', value:'1023'}
+	  ,{label:'休闲', value:'1024'}
+	  ,{label:'休闲 &gt;&gt; 竞技', value:'1013'}
+	  ,{label:'休闲 &gt;&gt; 益智', value:'1014'}
+	  ,{label:'音乐', value:'1011'}
+	  ,{label:'音乐 &gt;&gt; 节奏', value:'1025'}
+	  ,{label:'桌面游戏', value:'1026'}
       ] ">
 	</div>	
     <div ng-init=
@@ -262,21 +287,26 @@
 	
 	<div class="row" ng-controller="GameSearchCtrl">
 		<div>
-			<p>
-			您可以搜索任何关键字，何不试试搜索 Final, Racing, Xbox, 360, 天天, 全民 这些关键字？<a href="demo.html" target="_blank">(sample)</a>
-			</p>			
 			<form ng-submit="submit()">
-				游戏类型: <select name="cat" size="1"><option ng-repeat="x in categoryList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
-				发行日期: <select name="year" size="1"><option ng-repeat="x in releaseList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
-				游戏机种: <select name="site" size="1"><option ng-repeat="x in platformList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
-				Search: <input type="text" ng-model="text" name="text" size="20"/>
+				类型: <select name="cat" size="1"><option ng-repeat="x in categoryList | orderBy:['label']" label="{{x.label}}" value="{{x.value}}"/></select><br/>
+				日期: <select name="year" size="1"><option ng-repeat="x in releaseList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
+				机种: <select name="site" size="1"><option ng-repeat="x in platformList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
+				搜索: <input type="text" ng-model="text" name="text" size="20"/>
 				<input type="submit" id="submit" value="Search/Browse" />
 			</form>
+			<p>
+			何不试试<b class="variablecolor">Final, PS3, 360, 天天, 全民</b>？<a href="demo.html" target="_blank">(sample)</a>
+			</p>			
 		</div>
 		<div>
 			<!--Body content-->
-			<div id="container2" class="container2 js-isotope" data-isotope-options='{ "itemSelector": ".item" }'>
-				<div ng-repeat="game in games | orderBy:['Name','Platform','Id']" class="item thumbnail" data-id="{{game.Id}}" data-name="{{game.Name}}" data-platform="{{game.Platform}}" data-releasedate="{{game.ReleaseDate}}">
+			<div id="container2" class="container2">
+				<div ng-repeat="game in games | orderBy:['Name','Platform','Id']" class="item thumbnail"
+					data-id="{{game.Id}}"
+					data-name="{{game.Name}}"
+					data-platform="{{game.Platform}}"
+					data-releasedate="{{game.ReleaseDate}}"
+					data-url="#/games/{{game.UrlName}}">
 					<div class="title fb fz3"><a href="#/games/{{game.UrlName}}" target="_blank">{{game.Name}}</a></div>
 					<div>
 						<a href="#/games/{{game.UrlName}}" class="thumb" target="_blank" ><img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';"/></a>
@@ -285,6 +315,9 @@
 				</div>
 			</div>
 			<!-- #container -->
+			<!--
+			<p ng-repeat="x in categoryList | orderBy:['value']">{{x.label}}, {{x.value}}</p>
+			//-->
 		</div> 
 	</div>
   
