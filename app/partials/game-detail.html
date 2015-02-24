@@ -1,19 +1,27 @@
 <div class="title">
-<h2>{{game.Name}}</h2>
-</div>
-
+<h1 class="Encoding_{{game.Encoding}}">{{game.Name}}</h1>
 <div class="description">{{game.SimpleDesc}}</div>
-
-<div class="game-images">
-  <img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" class="game" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';">
+<hr/>
 </div>
 
-<p>
-	<div btf-markdown="markdown">
-	</div>
-</p>
+<div>
 
-<b class="variablecolor">TAGs:</b> {{game.TAGs}}<br/>
-<b class="variablecolor">Platform:</b> {{game.Platform}}<br/>
-<b class="variablecolor">Genre:</b> {{game.Genre}}<br/>
-<b class="variablecolor">ReleaseDate:</b> {{game.ReleaseDate}}<br/>
+<div class="col-md-2">
+	<div class="game-images">
+	  <img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" class="game" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';">
+	</div>
+	<b class="variablecolor">Platform:</b> {{game.Platform}}<br/>
+	<b class="variablecolor">Genre:</b> {{game.Genre}}<br/>
+	<b class="variablecolor">TAGs:</b> {{game.TAGs}}<br/>
+	<b class="variablecolor">ReleaseDate:</b> {{game.ReleaseDate}}<br/>
+	<b class="variablecolor">Encoding:</b> {{game.Encoding}}<br/>
+</div>
+
+<div class="col-md-6">
+	<div class="description">
+		<div btf-markdown="markdown">
+		</div>
+	</div>
+</div>
+
+</div>

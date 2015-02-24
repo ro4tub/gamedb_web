@@ -306,19 +306,24 @@
 		<div>
 			<!--Body content-->
 			<div id="container2" class="container2">
-				<div ng-repeat="game in games | orderBy:['Name','Platform','Id']" class="item thumbnail"
+				<div ng-repeat="game in games | orderBy:['Name','Platform','Id']" class="item thumbnail {{game.Platform}}"
 					data-id="{{game.Id}}"
 					data-name="{{game.Name}}"
-					data-platform="{{game.Platform}}"
-					data-genre="{{game.Genre}}"
-					data-tag="{{game.TAGs}}"
-					data-releasedate="{{game.ReleaseDate}}"
 					data-url="#/games/{{game.UrlName}}"
+					data-platform="{{game.Platform?game.Platform:GetRandomPlatform(game)}}"
+					data-genre="{{game.Genre?game.Genre:GetRandomGenre(game)}}"
+					data-tags="{{game.TAGs?game.TAGs:GetRandomTAGs(game)}}"
+					data-releasedate="{{game.ReleaseDate?game.ReleaseDate:GetRandomReleaseDate(game)}}"
 					>
-					<div class="title fb fz3"><a href="#/games/{{game.UrlName}}" target="_blank">{{game.Name}}</a></div>
+					<div class="title fb fz3 Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}">
+						<a href="#/games/{{game.UrlName}}" target="_blank">{{game.Name}}</a> {{game.Platform}}-{{game.Genre}}
+					</div>
 					<div>
 						<a href="#/games/{{game.UrlName}}" class="thumb" target="_blank" ><img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';"/></a>
 						<div class="description">{{game.SimpleDesc}}</div>
+					</div>
+					<div>
+					<div class="description">{{game.TAGs}}, {{game.ReleaseDate}}</div>
 					</div>
 				</div>
 			</div>

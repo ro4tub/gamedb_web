@@ -11,7 +11,6 @@ body {
 
 
 .item .title {
-  font-family: '微软雅黑', 'Condiment', Lucida Sans, Verdana, Helvetica, Arial, Sans-serif;
   text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
   margin: 0.5em 0em 0.5em 0.5em;  
   border-bottom: 1px solid black;
@@ -33,7 +32,7 @@ body {
 }
 
 .item .description {
-  padding: 3px;
+  /*padding: 3px;*/
   padding-left: 10px;  
 	display: -webkit-box;
 	overflow: hidden;	
@@ -50,7 +49,7 @@ input[type="text"] {
 
 .game-images {
   /*background-color: white;*/
-  width: 280px;
+  /*width: 280px;*/
   /*height: 450px;*/
   overflow: hidden;
   position: relative;
@@ -78,10 +77,10 @@ input[type="text"] {
 /** Detail View **/
 img.game {
   float: left;
-  margin-right: 3em;
-  margin-bottom: 2em;
+  margin-right: 2em;
+  margin-bottom: 1em;
   /*background-color: white;*/
-  padding: 2em;
+  padding: 1em;
   /*height: 400px;*/
   width: 220px;
   display: none;
@@ -141,10 +140,6 @@ ul.specs dt {
   font-weight: bold;
 }
 
-h1 {
-  border-bottom: 1px solid gray;
-}
-
 .container2 {
   /*background: #3BF;*/
   margin-top: 15px;
@@ -167,10 +162,36 @@ h1 {
   /*border-radius: 7px 7px 7px 7px;*/
   border-top-right-radius: 3em;
   
-  /*background: #EEE;*/
-  background-color: #EEE;
+  background: #EEE;
+  /*background-color: #EEE;*/
   color: #222;
   /*font-weight: bold;*/
+}
+
+.item.pc, .item.mac {
+	border-left: 2px dotted #F00;
+}
+.item.dreamcast, .item.saturn, .item.segacd , .item.genesis,
+.item.ouya, .item.ngage  {
+	border: 2px dotted #000;
+}
+
+.item.xbox, .item.xboxone, .item.xbox360 {
+	border-left: 10px solid #5C8F00;
+	background: #CFFB71;
+}
+.item.ps, .item.ps2, .item.ps3, .item.ps4, .item.psp, .item.vita {
+	border-left: 10px solid #000E9D;
+	background: #D6E6FA;
+}
+/*3ds is not a valid class name, so ... ds3*/
+.item.snes, .item.ds3, .item.ds, .item.gameboy, .item.gamecube, .item.gba, .item.gbc, .item.n64, .item.wii, .item.wii-u {
+	border-left: 10px solid #CBCAC6;
+}
+.item.iphone, .item.mobile {
+	border: 2px solid #7B7615; 
+	background: #9EF7B0;
+	/*background: -webkit-linear-gradient(0deg, #eee, #eee, #eee, #eee, #eee, #eee, #eee, #f00);*/
 }
 
 .pad45{margin-top:45px;}
@@ -213,4 +234,22 @@ h1 {
 	.item {
 		width:  290px;
 	}	 
+}
+
+.description {  
+  /*background: #EEE;*/
+  max-height: 140px;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+}
+
+.Encoding_Regular {
+  font-family: Verdana, Helvetica, Arial, Sans-serif;
+  font-style: italic;
+}
+
+.Encoding_CJK {
+  font-family: '微软雅黑', 'Condiment', Lucida Sans, Verdana, Helvetica, Arial, Sans-serif;
 }
