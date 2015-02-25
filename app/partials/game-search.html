@@ -315,8 +315,9 @@
 					data-tags="{{game.TAGs?game.TAGs:GetRandomTAGs(game)}}"
 					data-releasedate="{{game.ReleaseDate?game.ReleaseDate:GetRandomReleaseDate(game)}}"
 					>
-					<div class="title fb fz3 Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}">
-						<a href="#/games/{{game.UrlName}}" target="_blank">{{game.Name}}</a> {{game.Platform}}-{{game.Genre}}
+					<div class="title fb fz3 maxwidth250">
+						<a href="#/games/{{game.UrlName}}" class="Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}" target="_blank">{{game.Name}}</a>
+						<span class="TAG">{{game.Platform}}-{{game.Genre}}</span>
 					</div>
 					<div>
 						<a href="#/games/{{game.UrlName}}" class="thumb" target="_blank" ><img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';"/></a>

@@ -18,11 +18,15 @@ gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', '$routeP
     
 	$scope.submit = function () {
       if($scope.text) {
+        window.location = "#/search/" + $scope.text;
+      }
+    }
+
+      if($scope.text) {
         // rest查询
         $scope.games = GameSearch.query({keyword: $scope.text});
         $rootScope.pageTitle = "Search result(s) of \""+$scope.text+"\"";
-      }
-    }
+      }	
 	
 	$scope.GetRandomPlatform = function (g) {
 	  var platform=new Array('pc'
@@ -78,7 +82,7 @@ gamedbControllers.controller('GameDetailCtrl', ['$scope', '$rootScope', '$routeP
 			game.TAGs = "tag1 tag2 tag3"
 		}
 		if (!game.Platform) {
-			game.Platform = "iphone"
+			game.Platform = $scope.GetRandomPlatform(game);
 		}
 		if (!game.Genre) {
 			game.Genre = "Action"
@@ -90,6 +94,20 @@ gamedbControllers.controller('GameDetailCtrl', ['$scope', '$rootScope', '$routeP
 		game.Encoding = $rootScope.getEncoding(game.Name);
     });
 	
+	$scope.GetRandomPlatform = function (g) {
+	  var platform=new Array('pc'
+		, 'dreamcast', 'saturn', 'segacd ', 'genesis'
+		, 'ouya'
+		, 'ngage'
+		, 'mac'
+		, 'xbox', 'xboxone', 'xbox360'
+		, 'ps', 'ps2', 'ps3', 'ps4', 'psp', 'vita'
+		, 'snes', 'ds3', 'ds', 'gameboy', 'gamecube', 'gba', 'gbc', 'n64', 'wii', 'wii-u'
+		, 'iphone', 'mobile');
+		var c=Math.floor(Math.random()*platform.length);
+		g.Platform = platform[c];
+		return g.Platform;		
+	}	
 	$rootScope.getEncoding = function(s) {
 		// http://stackoverflow.com/questions/15033196/using-javascript-to-check-whether-a-string-contains-japanese-characters-includi
 		// /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/

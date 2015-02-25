@@ -1,27 +1,22 @@
 <div class="title">
-<h1 class="Encoding_{{game.Encoding}}">{{game.Name}}</h1>
-<div class="description">{{game.SimpleDesc}}</div>
-<hr/>
+	<h1 class="Encoding_{{game.Encoding}}">{{game.Name}}</h1>
+	<div class="description">{{game.SimpleDesc}}</div>
 </div>
-
-<div>
-
-<div class="col-md-2">
-	<div class="game-images">
-	  <img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" class="game" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';">
+<div class="col-xs-6 game-images item {{game.Platform}}">
+  <img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" class="game" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';">
+	<div>
+		<b class="variablecolor">Platform:</b> <span class="TAG">{{game.Platform}}<br/></span>
+		<b class="variablecolor">Genre:</b> <span class="TAG">{{game.Genre}}<br/></span>
+		<b class="variablecolor">TAGs:</b> <span class="TAG">{{game.TAGs}}<br/></span>
+		<b class="variablecolor">ReleaseDate:</b> <span class="TAG">{{game.ReleaseDate}}<br/></span>
+		<b class="variablecolor">Encoding:</b> <span class="TAG">{{game.Encoding}}</span>
 	</div>
-	<b class="variablecolor">Platform:</b> {{game.Platform}}<br/>
-	<b class="variablecolor">Genre:</b> {{game.Genre}}<br/>
-	<b class="variablecolor">TAGs:</b> {{game.TAGs}}<br/>
-	<b class="variablecolor">ReleaseDate:</b> {{game.ReleaseDate}}<br/>
-	<b class="variablecolor">Encoding:</b> {{game.Encoding}}<br/>
 </div>
-
-<div class="col-md-6">
-	<div class="description">
+<div>
+	<div class="markdown minwidth250">
 		<div btf-markdown="markdown">
 		</div>
+		<p>Risus dignissim. Porttitor lundium in? Massa aliquet porttitor, ac integer. Elementum nec a elementum nunc turpis vut sed, massa enim, dis, rhoncus, purus sociis, sociis parturient? Est porttitor tortor turpis dapibus lorem, nisi nisi nunc porta, penatibus tristique vel vel! Etiam et? Dapibus dapibus porttitor! Eu ut sit, nisi mus elementum, est placerat cras, sociis. Elementum diam, cras lacus mattis montes augue scelerisque rhoncus, et scelerisque, mattis aliquam augue phasellus ut turpis, turpis pulvinar lorem massa dis dictumst purus risus, mid amet pulvinar mattis sagittis, sociis pulvinar eu arcu aliquet, nisi, augue duis et, nascetur arcu. Et porttitor, integer velit. Pulvinar ridiculus magnis ac, a duis. Risus nec est, etiam porttitor a porta, montes mauris massa elit nunc dis magnis.</p>
+		<p>Dictumst, nascetur! Dignissim, pid proin sed placerat, ac enim, ac risus lectus sed elit etiam dignissim phasellus ac elementum tincidunt est purus, sit cursus, mus odio nisi urna et massa nec. Porttitor cras eu ac! Sed amet augue in lectus magna porttitor non adipiscing dapibus, urna placerat, arcu! Dis sit ut magnis placerat! Mid vel tortor turpis enim placerat eros rhoncus odio sociis. Purus nunc lundium rhoncus elementum odio. Cum turpis, in adipiscing scelerisque, pulvinar diam vel scelerisque nec, a. Sit a montes magnis sed nisi, tincidunt. Augue porttitor, natoque natoque vut? Aliquam scelerisque, integer. Sit dapibus lacus sed sagittis in turpis porta cum mid rhoncus dictumst tincidunt nec odio enim. Parturient augue, sed rhoncus. Nunc et, habitasse vut.</p>
 	</div>
-</div>
-
 </div>
