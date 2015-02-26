@@ -1,3 +1,4 @@
+<img class="hidden" src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="for WeiXin to locate"/>
 <div class="title">
 	<h1 class="Encoding_{{game.Encoding}}">{{game.Name}}</h1>
 	<div class="description">{{game.SimpleDesc}}</div>
@@ -5,10 +6,10 @@
 <div class="col-xs-6 game-images item {{game.Platform}}">
   <img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" class="game" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';">
 	<div>
-		<b class="variablecolor">Platform:</b> <span class="TAG">{{game.Platform}}<br/></span>
-		<b class="variablecolor">Genre:</b> <span class="TAG">{{game.Genre}}<br/></span>
-		<b class="variablecolor">TAGs:</b> <span class="TAG">{{game.TAGs}}<br/></span>
-		<b class="variablecolor">ReleaseDate:</b> <span class="TAG">{{game.ReleaseDate}}<br/></span>
+		<b class="variablecolor">Platform:</b> <a href="#/search/{{game.Platform}}"><span class="TAG">{{game.Platform}}</span></a><br/>
+		<b class="variablecolor">Genre:</b> <a href="#/search/{{game.Genre}}"><span class="TAG">{{game.Genre}}</span></a><br/>
+		<b class="variablecolor">TAGs:</b> <span class="TAG">{{game.TAGs}}</span><br/>
+		<b class="variablecolor">ReleaseDate:</b> <span class="TAG">{{game.ReleaseDate}}</span><br/>
 		<b class="variablecolor">Encoding:</b> <span class="TAG">{{game.Encoding}}</span>
 	</div>
 </div>

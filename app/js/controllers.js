@@ -29,7 +29,7 @@ gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', '$routeP
       }	
 	
 	$scope.GetRandomPlatform = function (g) {
-	  var platform=new Array('pc'
+	  var platforms=new Array('pc'
 		, 'dreamcast', 'saturn', 'segacd ', 'genesis'
 		, 'ouya'
 		, 'ngage'
@@ -38,23 +38,26 @@ gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', '$routeP
 		, 'ps', 'ps2', 'ps3', 'ps4', 'psp', 'vita'
 		, 'snes', 'ds3', 'ds', 'gameboy', 'gamecube', 'gba', 'gbc', 'n64', 'wii', 'wii-u'
 		, 'iphone', 'mobile');
-		var c=Math.floor(Math.random()*platform.length);
-		g.Platform = platform[c];
+		var c=Math.floor(Math.random()*platforms.length);
+		g.Platform = platforms[c];
 		return g.Platform;		
 	}
+	$scope.GetRandomGenre = function (g) {
+	  var genres=new Array('Action'
+		, 'Adventure', 'RPG', 'Casual ', 'Strategy'
+		, 'Puzzle', 'Racing', 'Simulation', 'Sports', 'Music' );
+		var c=Math.floor(Math.random()*genres.length);
+		g.Genre = genres[c];		
+		return g.Genre;
+	}	
 	$scope.GetRandomTAGs = function (g) {
 		g.TAGs = 'tag1 tag2 tag3';
 		return g.TAGs;
-	}
-	$scope.GetRandomGenre = function (g) {
-		g.Genre = 'Action';
-		return g.Genre;
 	}
 	$scope.GetRandomReleaseDate = function (g) {
 		g.ReleaseDate = '1900-01-01';
 		return g.ReleaseDate;
 	}
-	
 	$rootScope.getEncoding = function(s) {
 		// http://stackoverflow.com/questions/15033196/using-javascript-to-check-whether-a-string-contains-japanese-characters-includi
 		// /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/
@@ -79,23 +82,23 @@ gamedbControllers.controller('GameDetailCtrl', ['$scope', '$rootScope', '$routeP
 	  	$scope.markdown = game.DetailDesc
 		$rootScope.pageTitle = game.Name
 		if (!game.TAGs) {
-			game.TAGs = "tag1 tag2 tag3"
+			game.TAGs = $scope.GetRandomTAGs(game);
 		}
 		if (!game.Platform) {
 			game.Platform = $scope.GetRandomPlatform(game);
 		}
 		if (!game.Genre) {
-			game.Genre = "Action"
+			game.Genre = $scope.GetRandomGenre(game);
 		}
 		if (!game.ReleaseDate) {
-			game.ReleaseDate = "1900-01-01"
+			game.ReleaseDate = $scope.GetRandomReleaseDate(game);
 		}
 		
 		game.Encoding = $rootScope.getEncoding(game.Name);
     });
 	
 	$scope.GetRandomPlatform = function (g) {
-	  var platform=new Array('pc'
+	  var platforms=new Array('pc'
 		, 'dreamcast', 'saturn', 'segacd ', 'genesis'
 		, 'ouya'
 		, 'ngage'
@@ -104,10 +107,26 @@ gamedbControllers.controller('GameDetailCtrl', ['$scope', '$rootScope', '$routeP
 		, 'ps', 'ps2', 'ps3', 'ps4', 'psp', 'vita'
 		, 'snes', 'ds3', 'ds', 'gameboy', 'gamecube', 'gba', 'gbc', 'n64', 'wii', 'wii-u'
 		, 'iphone', 'mobile');
-		var c=Math.floor(Math.random()*platform.length);
-		g.Platform = platform[c];
+		var c=Math.floor(Math.random()*platforms.length);
+		g.Platform = platforms[c];
 		return g.Platform;		
+	}
+	$scope.GetRandomGenre = function (g) {
+	  var genres=new Array('Action'
+		, 'Adventure', 'RPG', 'Casual ', 'Strategy'
+		, 'Puzzle', 'Racing', 'Simulation', 'Sports', 'Music' );
+		var c=Math.floor(Math.random()*genres.length);
+		g.Genre = genres[c];		
+		return g.Genre;
 	}	
+	$scope.GetRandomTAGs = function (g) {
+		g.TAGs = 'tag1 tag2 tag3';
+		return g.TAGs;
+	}
+	$scope.GetRandomReleaseDate = function (g) {
+		g.ReleaseDate = '1900-01-01';
+		return g.ReleaseDate;
+	}
 	$rootScope.getEncoding = function(s) {
 		// http://stackoverflow.com/questions/15033196/using-javascript-to-check-whether-a-string-contains-japanese-characters-includi
 		// /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/

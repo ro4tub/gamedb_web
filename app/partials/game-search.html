@@ -1,3 +1,4 @@
+<img class="hidden" src="http://huangyaoshi.me/gamedb/static-mobile-img/logo.png" alt="for WeiXin to locate"/>
 <div class="container-fluid">
 
     <div ng-init=
@@ -317,14 +318,14 @@
 					>
 					<div class="title fb fz3 maxwidth250">
 						<a href="#/games/{{game.UrlName}}" class="Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}" target="_blank">{{game.Name}}</a>
-						<span class="TAG">{{game.Platform}}-{{game.Genre}}</span>
+						
 					</div>
 					<div>
 						<a href="#/games/{{game.UrlName}}" class="thumb" target="_blank" ><img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';"/></a>
 						<div class="description">{{game.SimpleDesc}}</div>
 					</div>
 					<div>
-					<div class="description">{{game.TAGs}}, {{game.ReleaseDate}}</div>
+						<div class="footnote description TAG">{{game.Platform}}-{{game.Genre}}</div>
 					</div>
 				</div>
 			</div>

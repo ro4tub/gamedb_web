@@ -10,12 +10,23 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+.hidden {
+  display: none;
+  /*visibility: hidden;*/
+}
 
 .item .title {
   text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
   margin: 0.5em 0em 0.5em 0.5em;  
-  border-bottom: 1px solid black;
+  /*border-bottom: 1px solid black;*/
   font-size: 1.6rem;
+  color: #521407;
+}
+.item .footnote {
+  text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
+  margin: 0.5em 0em 0.5em 0.5em;  
+  /*border-top: 1px solid black;*/
+  font-size: 1.8rem;
   color: #521407;
 }
 
