@@ -16,3 +16,9 @@ gamedbServices.factory('GameSearch', ['$resource',
     return $resource('http://localhost:8080/gamedbapi/search?v=:keyword', {}, {
     });
   }]);
+
+gamedbServices.factory('Homepage', ['$resource',
+  function($resource){
+    return $resource('http://localhost:8080/gamedbapi/search?v=:keyword', {}, {
+    });
+  }]);

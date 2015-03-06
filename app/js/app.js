@@ -16,6 +16,10 @@ var gamedbApp = angular.module('gamedbApp', [
 gamedbApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+      when('/home', {
+        templateUrl: 'partials/homepage.html',
+        controller: 'HomepageCtrl'
+      }).
       when('/search/:keyword', {
         templateUrl: 'partials/game-search.html',
         controller: 'GameSearchCtrl'
@@ -29,6 +33,6 @@ gamedbApp.config(['$routeProvider',
         controller: 'GameDetailCtrl'
       }).
       otherwise({
-        redirectTo: '/search'
+        redirectTo: '/home'
       });
   }]);

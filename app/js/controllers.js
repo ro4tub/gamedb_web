@@ -4,6 +4,14 @@
 
 var gamedbControllers = angular.module('gamedbControllers', []);
 
+gamedbControllers.controller('HomepageCtrl', ['$scope', '$rootScope', '$routeParams', 'Homepage',
+  function($scope, $rootScope, $routeParams, Homepage) {
+	  $scope.text = "Hello world!";
+	  $scope.topfree = Homepage.query({keyword: 'Test Drive Le Mans'});
+	  $scope.toppaid = Homepage.query({keyword: 'Final Fantasy'});
+	  $scope.topgrossing = Homepage.query({keyword: '天天'});
+  }]);
+
 gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', '$routeParams', 'GameSearch',
   function($scope, $rootScope, $routeParams, GameSearch) {
     $scope.games = [];
