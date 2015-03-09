@@ -1,0 +1,51 @@
+<a href="http://localhost:8000/app/index.html#/games/216"><img src="http://huangyaoshi.me/gamedb/pic/220x220/216.png" height="220px"/></a>
+<a href="http://localhost:8000/app/index.html#/games/30529"><img src="http://huangyaoshi.me/gamedb/pic/gamerankings/8034_thumb.jpg" height="220px"/></a>
+<a href="http://localhost:8000/app/index.html#/games/30228"><img src="http://huangyaoshi.me/gamedb/pic/gamerankings/3669_thumb.jpg" height="220px"/></a>
+<div>
+	<hr/>
+	<div>
+	天天:
+				<span ng-repeat="game in topgrossing | orderBy:['Name','Platform','Id']"
+					data-id="{{game.Id}}"
+					data-name="{{game.Name}}"
+					data-url="#/games/{{game.UrlName}}"
+					data-platform="{{game.Platform?game.Platform:GetRandomPlatform(game)}}"
+					data-genre="{{game.Genre?game.Genre:GetRandomGenre(game)}}"
+					data-tags="{{game.TAGs?game.TAGs:GetRandomTAGs(game)}}"
+					data-releasedate="{{game.ReleaseDate?game.ReleaseDate:GetRandomReleaseDate(game)}}"
+					>
+						<a href="#/games/{{game.UrlName}}" class="Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}" target="_blank">{{game.Name}}</a> ({{game.Platform}})
+				</span>				
+	</div>
+	<hr/>
+	<div>
+	Test Drive Le Mans:
+				<span ng-repeat="game in topfree | orderBy:['Name','Platform','Id']" 
+					data-id="{{game.Id}}"
+					data-name="{{game.Name}}"
+					data-url="#/games/{{game.UrlName}}"
+					data-platform="{{game.Platform?game.Platform:GetRandomPlatform(game)}}"
+					data-genre="{{game.Genre?game.Genre:GetRandomGenre(game)}}"
+					data-tags="{{game.TAGs?game.TAGs:GetRandomTAGs(game)}}"
+					data-releasedate="{{game.ReleaseDate?game.ReleaseDate:GetRandomReleaseDate(game)}}"
+					>
+						<a href="#/games/{{game.UrlName}}" class="Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}" target="_blank">{{game.Name}}</a> ({{game.Platform}})
+				</span>
+	</div>
+	<hr/>
+	<div>
+	Final Fantasy:
+				<span ng-repeat="game in toppaid | orderBy:['Name','Platform','Id']" 
+					data-id="{{game.Id}}"
+					data-name="{{game.Name}}"
+					data-url="#/games/{{game.UrlName}}"
+					data-platform="{{game.Platform?game.Platform:GetRandomPlatform(game)}}"
+					data-genre="{{game.Genre?game.Genre:GetRandomGenre(game)}}"
+					data-tags="{{game.TAGs?game.TAGs:GetRandomTAGs(game)}}"
+					data-releasedate="{{game.ReleaseDate?game.ReleaseDate:GetRandomReleaseDate(game)}}"
+					>
+						<a href="#/games/{{game.UrlName}}" class="Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}" target="_blank">{{game.Name}}</a> ({{game.Platform}})
+				</span>
+	</div>
+
+</div>
