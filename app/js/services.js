@@ -13,12 +13,12 @@ gamedbServices.factory('Game', ['$resource',
 
 gamedbServices.factory('GameSearch', ['$resource',
   function($resource){
-    return $resource('http://localhost:8080/gamedbapi/search?v=:keyword', {}, {
+    return $resource('http://localhost:8080/gamedbapi/search?v=:keyword&p=:platform&g=:genre', {}, {
     });
   }]);
 
 gamedbServices.factory('Homepage', ['$resource',
   function($resource){
-    return $resource('http://localhost:8080/gamedbapi/search?v=:keyword', {}, {
+    return $resource('http://localhost:8080/gamedbapi/search?v=:keyword&p=:platform&g=:genre', {}, {
     });
   }]);

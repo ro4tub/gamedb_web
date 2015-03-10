@@ -1,10 +1,11 @@
-<img class="hidden" src="http://huangyaoshi.me/gamedb/static-mobile-img/logo.png" alt="for WeiXin to locate" onerror="this.src='img/onerror.jpg';"/>
+<img class="hidden" src="http://lorempixel.com/g/300/300/" alt="for WeiXin to locate" onerror="this.src='img/onerror.jpg';"/>
+
 <div class="container-fluid">
 
     <div ng-init=
       "categoryList=[
-	  {label:' -- All Categories --', value:'0'}
-	  ,{label:'Action ', value:'54'}
+	  {label:' 任何类型', value:'0'}
+	  ,{label:'Action ', value:'action'}
 	  ,{label:'Action &gt;&gt; Arcade ', value:'289'}
 	  ,{label:'Action &gt;&gt; Beat-\'Em-Up ', value:'318'}
 	  ,{label:'Action &gt;&gt; Beat-\'Em-Up &gt;&gt; 2D ', value:'160'}
@@ -39,7 +40,7 @@
 	  ,{label:'Action Adventure &gt;&gt; Open-World ', value:'292'}
 	  ,{label:'Action Adventure &gt;&gt; Sandbox ', value:'291'}
 	  ,{label:'Action Adventure &gt;&gt; Survival ', value:'164'}
-	  ,{label:'Adventure ', value:'50'}
+	  ,{label:'Adventure ', value:'adventure'}
 	  ,{label:'Adventure &gt;&gt; 3D ', value:'77'}
 	  ,{label:'Adventure &gt;&gt; 3D &gt;&gt; First-Person ', value:'190'}
 	  ,{label:'Adventure &gt;&gt; 3D &gt;&gt; Third-Person ', value:'192'}
@@ -61,14 +62,14 @@
 	  ,{label:'Miscellaneous &gt;&gt; General ', value:'256'}
 	  ,{label:'Miscellaneous &gt;&gt; Party / Minigame ', value:'181'}
 	  ,{label:'Miscellaneous &gt;&gt; Trivia / Game Show ', value:'224'}
-	  ,{label:'Puzzle ', value:'173'}
+	  ,{label:'Puzzle ', value:'puzzle'}
 	  ,{label:'Puzzle &gt;&gt; Action ', value:'282'}
 	  ,{label:'Puzzle &gt;&gt; General ', value:'281'}
 	  ,{label:'Puzzle &gt;&gt; Hidden Object ', value:'286'}
 	  ,{label:'Puzzle &gt;&gt; Logic ', value:'285'}
 	  ,{label:'Puzzle &gt;&gt; Matching ', value:'283'}
 	  ,{label:'Puzzle &gt;&gt; Stacking ', value:'284'}
-	  ,{label:'Racing ', value:'47'}
+	  ,{label:'Racing ', value:'racing'}
 	  ,{label:'Racing &gt;&gt; Arcade ', value:'314'}
 	  ,{label:'Racing &gt;&gt; Arcade &gt;&gt; Automobile ', value:'232'}
 	  ,{label:'Racing &gt;&gt; Arcade &gt;&gt; Futuristic ', value:'139'}
@@ -77,7 +78,7 @@
 	  ,{label:'Racing &gt;&gt; Simulation ', value:'315'}
 	  ,{label:'Racing &gt;&gt; Simulation &gt;&gt; Automobile ', value:'138'}
 	  ,{label:'Racing &gt;&gt; Simulation &gt;&gt; Other ', value:'274'}
-	  ,{label:'Role-Playing ', value:'48'}
+	  ,{label:'Role-Playing ', value:'role-playing'}
 	  ,{label:'Role-Playing &gt;&gt; Action RPG ', value:'73'}
 	  ,{label:'Role-Playing &gt;&gt; General ', value:'257'}
 	  ,{label:'Role-Playing &gt;&gt; Japanese-Style ', value:'71'}
@@ -85,7 +86,7 @@
 	  ,{label:'Role-Playing &gt;&gt; Roguelike ', value:'296'}
 	  ,{label:'Role-Playing &gt;&gt; Trainer ', value:'297'}
 	  ,{label:'Role-Playing &gt;&gt; Western-Style ', value:'72'}
-	  ,{label:'Simulation ', value:'46'}
+	  ,{label:'Simulation ', value:'Simulation'}
 	  ,{label:'Simulation &gt;&gt; Flight ', value:'68'}
 	  ,{label:'Simulation &gt;&gt; Flight &gt;&gt; Civilian ', value:'157'}
 	  ,{label:'Simulation &gt;&gt; Flight &gt;&gt; Combat ', value:'130'}
@@ -104,7 +105,7 @@
 	  ,{label:'Simulation &gt;&gt; Virtual &gt;&gt; Career ', value:'300'}
 	  ,{label:'Simulation &gt;&gt; Virtual &gt;&gt; Pet ', value:'299'}
 	  ,{label:'Simulation &gt;&gt; Virtual &gt;&gt; Virtual Life ', value:'242'}
-	  ,{label:'Sports ', value:'43'}
+	  ,{label:'Sports ', value:'sports'}
 	  ,{label:'Sports &gt;&gt; General ', value:'254'}
 	  ,{label:'Sports &gt;&gt; Individual ', value:'92'}
 	  ,{label:'Sports &gt;&gt; Individual &gt;&gt; Athletics ', value:'231'}
@@ -148,7 +149,7 @@
 	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Management ', value:'212'}
 	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Soccer &gt;&gt; Sim ', value:'211'}
 	  ,{label:'Sports &gt;&gt; Team &gt;&gt; Volleyball ', value:'105'}
-	  ,{label:'Strategy ', value:'45'}
+	  ,{label:'Strategy ', value:'strategy'}
 	  ,{label:'Strategy &gt;&gt; General ', value:'253'}
 	  ,{label:'Strategy &gt;&gt; Management ', value:'60'}
 	  ,{label:'Strategy &gt;&gt; Management &gt;&gt; Business / Tycoon ', value:'220'}
@@ -165,36 +166,36 @@
 	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; Card Battle ', value:'240'}
 	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; General ', value:'305'}
 	  ,{label:'Strategy &gt;&gt; Turn-Based &gt;&gt; Tactics ', value:'308'}
-	  ,{label:'角色扮演', value:'1001'}
-	  ,{label:'角色扮演 &gt;&gt; 卡牌', value:'1006'}
-	  ,{label:'跑酷躲避', value:'1002'}
-	  ,{label:'塔防', value:'1003'}
-	  ,{label:'消除', value:'1004'}
-	  ,{label:'射击', value:'1005'}
-	  ,{label:'射击 &gt;&gt; 飞行', value:'1016'}
-	  ,{label:'棋牌', value:'1007'}
-	  ,{label:'其他', value:'1008'}
-	  ,{label:'策略', value:'1009'}
-	  ,{label:'动作', value:'1010'}
-	  ,{label:'模拟', value:'1012'}
-	  ,{label:'模拟 &gt;&gt; 经营', value:'1022'}
-	  ,{label:'竞速', value:'1015'}
-	  ,{label:'儿童', value:'1018'}
-	  ,{label:'恋爱养成', value:'1020'}
-	  ,{label:'冒险解谜', value:'1021'}
-	  ,{label:'体育', value:'1017'}
-	  ,{label:'体育 &gt;&gt; 竞技', value:'1023'}
-	  ,{label:'休闲', value:'1024'}
-	  ,{label:'休闲 &gt;&gt; 竞技', value:'1013'}
-	  ,{label:'休闲 &gt;&gt; 益智', value:'1014'}
-	  ,{label:'音乐', value:'1011'}
-	  ,{label:'音乐 &gt;&gt; 节奏', value:'1025'}
-	  ,{label:'桌面游戏', value:'1026'}
+	  ,{label:'角色扮演', value:'角色扮演'}
+	  ,{label:'角色扮演 &gt;&gt; 卡牌', value:'卡牌战斗'}
+	  ,{label:'跑酷躲避', value:'跑酷躲避'}
+	  ,{label:'塔防', value:'塔防'}
+	  ,{label:'消除', value:'消除'}
+	  ,{label:'射击', value:'射击'}
+	  ,{label:'射击 &gt;&gt; 飞行', value:'射击飞行'}
+	  ,{label:'棋牌', value:'棋牌'}
+	  ,{label:'其他', value:'其他'}
+	  ,{label:'策略', value:'策略'}
+	  ,{label:'动作', value:'动作'}
+	  ,{label:'模拟', value:'模拟'}
+	  ,{label:'模拟 &gt;&gt; 经营', value:'模拟经营'}
+	  ,{label:'竞速', value:'竞速'}
+	  ,{label:'儿童', value:'儿童'}
+	  ,{label:'恋爱养成', value:'恋爱养成'}
+	  ,{label:'冒险解谜', value:'冒险解谜'}
+	  ,{label:'体育', value:'体育'}
+	  ,{label:'体育 &gt;&gt; 竞技', value:'体育竞技'}
+	  ,{label:'休闲', value:'休闲'}
+	  ,{label:'休闲 &gt;&gt; 竞技', value:'休闲竞技'}
+	  ,{label:'休闲 &gt;&gt; 益智', value:'休闲益智'}
+	  ,{label:'音乐', value:'音乐'}
+	  ,{label:'音乐 &gt;&gt; 节奏', value:'音乐节奏'}
+	  ,{label:'桌面游戏', value:'桌面游戏'}
       ] ">
 	</div>	
     <div ng-init=
       "releaseList=[
-	  {label:'at any time', value:'0'}
+	  {label:'任何时间', value:'0'}
 	  ,{label:'in the past', value:'1'}
 	  ,{label:'in the last month', value:'2'}
 	  ,{label:'in the last three months', value:'3'}
@@ -251,7 +252,7 @@
 	</div>
     <div ng-init=
       "platformList=[
-	  {label:'All Platforms', value:''}
+	  {label:'任何机种', value:'0'}
 	  ,{label:'3DS', value:'3ds'}
 	  ,{label:'Android', value:'android'}
 	  ,{label:'Dreamcast', value:'dreamcast'}
@@ -289,19 +290,22 @@
 	<div class="row" ng-controller="GameSearchCtrl">
 		<div>
 			<form ng-submit="submit()">
-				类型: <select name="cat" size="1"><option ng-repeat="x in categoryList | orderBy:['label']" label="{{x.label}}" value="{{x.value}}"/></select><br/>
-				日期: <select name="year" size="1"><option ng-repeat="x in releaseList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
-				机种: <select name="site" size="1"><option ng-repeat="x in platformList" label="{{x.label}}" value="{{x.value}}"/></select><br/>
-				搜索: <input type="text" ng-model="text" name="text" size="20"/>
+				类型: <select name="cat" ng-model="genreInput" ng-options="x.value as x.label for x in categoryList | orderBy:['label']" ></select><br/>
+				时间: <select name="year" ng-model="yearInput" size="1" ng-options="x.value as x.label for x in releaseList | orderBy:['label']" ></select><br/>
+				机种: <select name="platform" ng-model="platformInput" size="1" ng-options="x.value as x.label for x in platformList | orderBy:['label']" ></select><br/>
+				搜索: <input name="keyword" type="text" ng-model="keywordInput" size="20"/>
 				<input type="submit" id="submit" value="Search/Browse" />
 			</form>
 			<p>
 			何不试试
-				<a href="index.html#/search/Final">Final</a>,
-				<a href="index.html#/search/PS3">PS3</a>,
-				<a href="index.html#/search/360">360</a>,
-				<a href="index.html#/search/天天">天天</a>,
-				<a href="index.html#/search/全民">全民</a>？<a href="demo.html" target="_blank">(sample)</a>
+				<a href="index.html#/search/v=Final&p=ps2">Final+PS2</a>,
+				<a href="index.html#/search/v=Final&p=xbox360">Final+360</a>,
+				<a href="index.html#/search/v=体育">体育</a>,
+				<a href="index.html#/search/v=360">360</a>,
+				<a href="index.html#/search/v=天天&p=iphone">天天系列手游</a>,
+				<a href="index.html#/search/v=三国">三国</a>,
+				<a href="index.html#/search/v=腾讯&p=iphone&g=动作">腾讯动作手游</a>
+				？<a href="demo.html" target="_blank">(sample)</a>
 			</p>			
 		</div>
 		<div>

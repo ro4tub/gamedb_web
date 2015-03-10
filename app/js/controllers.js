@@ -15,26 +15,66 @@ gamedbControllers.controller('HomepageCtrl', ['$scope', '$rootScope', '$routePar
 gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', '$routeParams', 'GameSearch',
   function($scope, $rootScope, $routeParams, GameSearch) {
     $scope.games = [];
-    
+	
+    $scope.keywordInput = "腾讯";  //default value
+	$scope.platformInput = "0";
+	$scope.yearInput = "0"; // at any time
+	$scope.genreInput = "0";
 	if ( $routeParams.keyword) {
-      $scope.text = $routeParams.keyword;  
-      $rootScope.pageTitle = "Search \""+$scope.text+"\"";
+		var vars = [], hash;
+		var hashes = $routeParams.keyword.slice($routeParams.keyword.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++)
+		{
+			hash = hashes[i].split('=');
+			vars.push(hash[0]);
+			vars[hash[0]] = hash[1];
+		}
+		console.log(vars);
+	
+      $scope.keywordInput	= (vars["v"] != undefined ? vars["v"] : "腾讯");// $routeParams.keyword;  
+	  $scope.platformInput	= (vars["p"] != undefined ? vars["p"] : "0");
+	  $scope.yearInput		= (vars["y"] != undefined ? vars["y"] : "0");
+	  $scope.genreInput		= (vars["g"] != undefined ? vars["g"] : "0");
+	  
+      $rootScope.pageTitle = "Search \""+$scope.keywordInput+"\"";
     } else {
-      $scope.text = "天天";  //default value
       $rootScope.pageTitle = "Welcome"
     }
-    
+	
 	$scope.submit = function () {
-      if($scope.text) {
-        window.location = "#/search/" + $scope.text;
+      //if($scope.keywordInput)
+	  {
+        window.location = "#/search/v=" + $scope.keywordInput +
+								($scope.platformInput != "0" ? "&p=" + $scope.platformInput : "") +
+								($scope.genreInput != "0" ? "&g=" + $scope.genreInput : "") +
+								($scope.yearInput != "0" ? "&y=" + $scope.yearInput : "");
       }
     }
 
-      if($scope.text) {
+    //if($scope.keywordInput)
+	{
         // rest查询
-        $scope.games = GameSearch.query({keyword: $scope.text});
-        $rootScope.pageTitle = "Search result(s) of \""+$scope.text+"\"";
-      }	
+        if ( $scope.genreInput != "0") {
+			if ( $scope.platformInput != "0") {
+				$scope.games = GameSearch.query({keyword: $scope.keywordInput, platform: $scope.platformInput, genre: $scope.genreInput});
+			}
+			else
+			{
+				$scope.games = GameSearch.query({keyword: $scope.keywordInput,                                 genre: $scope.genreInput});
+			}
+		}
+		else
+		{
+			if ( $scope.platformInput != "0") {
+				$scope.games = GameSearch.query({keyword: $scope.keywordInput, platform: $scope.platformInput });
+			}
+			else {
+				$scope.games = GameSearch.query({keyword: $scope.keywordInput                                 });
+			}
+		}
+		
+        $rootScope.pageTitle = "Search result(s) of \"v=" + $scope.keywordInput + "&p=" + $scope.platformInput + "&g=" + $scope.genreInput +"\"";
+    }	
 	
 	$scope.GetRandomPlatform = function (g) {
 	  var platforms=new Array('pc'
