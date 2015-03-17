@@ -7,9 +7,16 @@ var gamedbControllers = angular.module('gamedbControllers', []);
 gamedbControllers.controller('HomepageCtrl', ['$scope', '$rootScope', '$routeParams', 'Homepage',
   function($scope, $rootScope, $routeParams, Homepage) {
 	  $scope.text = "Hello world!";
-	  $scope.topfree = Homepage.query({keyword: 'Test Drive Le Mans'});
-	  $scope.toppaid = Homepage.query({keyword: 'Final Fantasy'});
-	  $scope.topgrossing = Homepage.query({keyword: '天天'});
+	  $scope.topgrossing = Homepage.query({keyword: 'Final Fantasy', platform: 'ps2'});
+	  $scope.topfree = Homepage.query({keyword: 'Final Fantasy', platform: 'ps3'});
+	  $scope.toppaid = Homepage.query({keyword: 'Zelda', platform: 'gamecube'});
+
+	$scope.submit = function () {
+      //if($scope.keywordInput)
+	  {
+        window.location = "#/search/v=" + $scope.keywordInput;
+      }
+    }
   }]);
 
 gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', '$routeParams', 'GameSearch',

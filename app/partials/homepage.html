@@ -1,52 +1,60 @@
-<a href="index.html#/games/216"><img src="http://huangyaoshi.me/gamedb/pic/220x220/216.png" height="220px"/></a>
-<a href="index.html#/games/30529"><img src="http://huangyaoshi.me/gamedb/pic/gamerankings/8034_thumb.jpg" height="220px"/></a>
-<a href="index.html#/games/30228"><img src="http://huangyaoshi.me/gamedb/pic/gamerankings/3669_thumb.jpg" height="220px"/></a>
-<a href="index.html#/search/v=%E8%85%BE%E8%AE%AF&p=iphone&g=%E5%8A%A8%E4%BD%9C">搜索：腾讯动作手游</a>
+<div height="500px">
+<form name="sf" id="sf" ng-submit="submit()">
+<div class="qborder">
+	<input name="keyword" type="text" ng-model="keywordInput" size="47" maxlength="100" autocomplete="off"/>
+</div>
+<input type="submit" class="stb" value="搜索" id="stb" onclick="if(this.form.query.value=='')return false;" onmousedown="this.className='btnactive'" onmouseup="this.className='stb'" onmouseout="this.className='stb'">
+        <input type="hidden" name="_asf" value="www.sogou.com">
+        <input type="hidden" name="_ast">
+        <input type="hidden" name="ie" value="utf8">
+        <input type="hidden" value="s.idx" name="pid">
+        <input type="hidden" value="s.idx.se" name="cid">
+        <input type="hidden" value="soso" name="rfrom">
+        <input type="hidden" value="" name="unc">
+<!--
+	<div class="suggestion nobg" id="vl" style="top: 52px; left: 0px; display: block;">
+		<div class="suginner">
+			<p class="s_title" style="margin: 0px;">今日热词</p>
+			<ul class="suglist">
+				<li lid="0" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_1.gif) no-repeat;"></em>中石油总经理被查 <img src="http://www.sogou.com/sug/images/new2.gif" align="absmiddle"></li>
+				<li lid="1" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_2.gif) no-repeat;"></em>中方戒备挂实弹</li>
+				<li lid="2" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_3.gif) no-repeat;"></em>工信部约谈运营商</li>
+				<li lid="3" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_4.gif) no-repeat;"></em>九成假币出自一人</li>
+				<li lid="4" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_5.gif) no-repeat;"></em>新验证码破解</li>
+				<li lid="5" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_6.gif) no-repeat;"></em>大老虎夫人</li>
+				<li lid="6" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_7.gif) no-repeat;"></em>王府井抢劫案</li>
+				<li lid="7" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_8.gif) no-repeat;"></em>店主死后藏冰柜</li>
+				<li lid="8" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_9.gif) no-repeat;"></em>57层高楼19天建成</li>
+				<li lid="9" style="height: 27px;"><em class="n0" style="background:url(http://www.sogou.com/sug/images/n_10.gif) no-repeat;"></em>草根打假年入百万</li>
+			</ul>
+			<div class="sugc" id="sugc" style="display: none;"></div>
+		</div>
+	</div>
+//-->
+		</form>
+</div>
+
 <div>
+	搜索示例:
+	<a href="index.html#/search/v=腾讯&p=iphone&g=动作">【腾讯动作手游】</a>
+	<a href="index.html#/search/v=腾讯&p=iphone&g=休闲益智">【腾讯休闲益智手游】</a>
+	<a href="index.html#/search/v=首发&p=xboxone">【XboxOne首发】</a>
+	<a href="index.html#/search/v=Warcraft">【魔兽】</a>
+
 	<hr/>
 	<div>
-	天天:
-				<span ng-repeat="game in topgrossing | orderBy:['Name','Platform','Id']"
-					data-id="{{game.Id}}"
-					data-name="{{game.Name}}"
-					data-url="#/games/{{game.UrlName}}"
-					data-platform="{{game.Platform?game.Platform:GetRandomPlatform(game)}}"
-					data-genre="{{game.Genre?game.Genre:GetRandomGenre(game)}}"
-					data-tags="{{game.TAGs?game.TAGs:GetRandomTAGs(game)}}"
-					data-releasedate="{{game.ReleaseDate?game.ReleaseDate:GetRandomReleaseDate(game)}}"
-					>
-						<a href="#/games/{{game.UrlName}}" class="Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}" target="_blank">{{game.Name}}</a> ({{game.Platform}})
-				</span>				
-	</div>
+	Top Grossing:
+				<a ng-repeat="game in topgrossing | orderBy:['Name','Platform','Id']"
+					href="#/games/{{game.UrlName}}"><img src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" height="100px"/></a>
 	<hr/>
-	<div>
-	Test Drive Le Mans:
-				<span ng-repeat="game in topfree | orderBy:['Name','Platform','Id']" 
-					data-id="{{game.Id}}"
-					data-name="{{game.Name}}"
-					data-url="#/games/{{game.UrlName}}"
-					data-platform="{{game.Platform?game.Platform:GetRandomPlatform(game)}}"
-					data-genre="{{game.Genre?game.Genre:GetRandomGenre(game)}}"
-					data-tags="{{game.TAGs?game.TAGs:GetRandomTAGs(game)}}"
-					data-releasedate="{{game.ReleaseDate?game.ReleaseDate:GetRandomReleaseDate(game)}}"
-					>
-						<a href="#/games/{{game.UrlName}}" class="Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}" target="_blank">{{game.Name}}</a> ({{game.Platform}})
-				</span>
-	</div>
+	Top Free:
+				<a ng-repeat="game in topfree | orderBy:['Name','Platform','Id']"
+					href="#/games/{{game.UrlName}}"><img src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" height="100px"/></a>
 	<hr/>
-	<div>
-	Final Fantasy:
-				<span ng-repeat="game in toppaid | orderBy:['Name','Platform','Id']" 
-					data-id="{{game.Id}}"
-					data-name="{{game.Name}}"
-					data-url="#/games/{{game.UrlName}}"
-					data-platform="{{game.Platform?game.Platform:GetRandomPlatform(game)}}"
-					data-genre="{{game.Genre?game.Genre:GetRandomGenre(game)}}"
-					data-tags="{{game.TAGs?game.TAGs:GetRandomTAGs(game)}}"
-					data-releasedate="{{game.ReleaseDate?game.ReleaseDate:GetRandomReleaseDate(game)}}"
-					>
-						<a href="#/games/{{game.UrlName}}" class="Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}" target="_blank">{{game.Name}}</a> ({{game.Platform}})
-				</span>
+	Top Paid:
+				<a ng-repeat="game in toppaid | orderBy:['Name','Platform','Id']"
+					href="#/games/{{game.UrlName}}"><img src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" height="100px"/></a>
+
 	</div>
 
 </div>
