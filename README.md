@@ -1,3 +1,18 @@
+# memo
+
+* Action
+* Action Adventure
+* Adventure
+* Casual & Puzzle
+* Miscellaneous
+* Racing
+* Role-Playing
+* Simulation
+* Sports
+* Strategy
+
+
+
 # angular-seed — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.

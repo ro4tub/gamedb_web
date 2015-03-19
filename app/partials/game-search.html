@@ -2,7 +2,23 @@
 
 <div class="container-fluid">
 
-    <div ng-init=
+	<div ng-init=
+      "categoryList=[
+	  {label:' 任何类型', value:'0'}
+	  ,{label:'Action,动作', value:'Action'}
+	  ,{label:'Action Adventure,动作冒险', value:'Action-Adventure'}
+	  ,{label:'Adventure,冒险解谜', value:'Adventure'}
+	  ,{label:'Casual,休闲益智', value:'Casual'}
+	  ,{label:'Miscellaneous,其他类', value:'Miscellaneous'}
+	  ,{label:'Racing,竞速', value:'Racing'}
+	  ,{label:'Role-Playing,角色扮演', value:'Role-Playing'}
+	  ,{label:'Simulation,模拟', value:'Simulation'}
+	  ,{label:'Sports,体育竞技', value:'Sports'}
+	  ,{label:'Strategy,策略', value:'Strategy'}
+      ] ">
+	</div>	
+    <!--
+	<div ng-init=
       "categoryList=[
 	  {label:' 任何类型', value:'0'}
 	  ,{label:'Action ', value:'action'}
@@ -193,6 +209,7 @@
 	  ,{label:'桌面游戏', value:'桌面游戏'}
       ] ">
 	</div>	
+	//-->
     <div ng-init=
       "releaseList=[
 	  {label:'任何时间', value:'0'}
@@ -253,36 +270,36 @@
     <div ng-init=
       "platformList=[
 	  {label:'任何机种', value:'0'}
-	  ,{label:'3DS', value:'3ds'}
-	  ,{label:'Android', value:'android'}
-	  ,{label:'Dreamcast', value:'dreamcast'}
-	  ,{label:'DS', value:'ds'}
-	  ,{label:'Game Boy', value:'gameboy'}
-	  ,{label:'Game Boy Advance', value:'gba'}
-	  ,{label:'Game Boy Color', value:'gbc'}
-	  ,{label:'GameCube', value:'gamecube'}
-	  ,{label:'Genesis', value:'genesis'}
 	  ,{label:'iOS (iPhone/iPad)', value:'iphone'}
-	  ,{label:'Macintosh', value:'mac'}
-	  ,{label:'Mobile', value:'mobile'}
-	  ,{label:'N-Gage', value:'ngage'}
-	  ,{label:'Nintendo 64', value:'n64'}
-	  ,{label:'Ouya', value:'ouya'}
 	  ,{label:'PC', value:'pc'}
+	  ,{label:'Xbox', value:'xbox'}
+	  ,{label:'Xbox 360', value:'xbox360'}
+	  ,{label:'Xbox One', value:'xboxone'}
 	  ,{label:'PlayStation', value:'ps'}
 	  ,{label:'PlayStation 2', value:'ps2'}
 	  ,{label:'PlayStation 3', value:'ps3'}
 	  ,{label:'PlayStation 4', value:'ps4'}
 	  ,{label:'PlayStation Vita', value:'vita'}
 	  ,{label:'PSP', value:'psp'}
-	  ,{label:'Saturn', value:'saturn'}
-	  ,{label:'Sega CD', value:'segacd'}
-	  ,{label:'Super Nintendo', value:'snes'}
 	  ,{label:'Wii', value:'wii'}
 	  ,{label:'Wii U', value:'wii-u'}
-	  ,{label:'Xbox', value:'xbox'}
-	  ,{label:'Xbox 360', value:'xbox360'}
-	  ,{label:'Xbox One', value:'xboxone'}
+	  ,{label:'GameCube', value:'gamecube'}
+	  ,{label:'Nintendo 64', value:'n64'}
+	  ,{label:'Super Nintendo', value:'snes'}
+	  ,{label:'3DS', value:'3ds'}
+	  ,{label:'DS', value:'ds'}
+	  ,{label:'Game Boy', value:'gameboy'}
+	  ,{label:'Game Boy Advance', value:'gba'}
+	  ,{label:'Game Boy Color', value:'gbc'}
+	  ,{label:'Android', value:'android'}
+	  ,{label:'Dreamcast', value:'dreamcast'}
+	  ,{label:'Genesis', value:'genesis'}
+	  ,{label:'Macintosh', value:'mac'}
+	  ,{label:'Mobile', value:'mobile'}
+	  ,{label:'N-Gage', value:'ngage'}
+	  ,{label:'Ouya', value:'ouya'}
+	  ,{label:'Saturn', value:'saturn'}
+	  ,{label:'Sega CD', value:'segacd'}
       ] ">
 	</div>
 	
@@ -290,9 +307,9 @@
 	<div class="row" ng-controller="GameSearchCtrl">
 		<div>
 			<form ng-submit="submit()">
-				类型: <select name="cat" ng-model="genreInput" ng-options="x.value as x.label for x in categoryList | orderBy:['label']" ></select><br/>
-				时间: <select name="year" ng-model="yearInput" size="1" ng-options="x.value as x.label for x in releaseList | orderBy:['label']" ></select><br/>
-				机种: <select name="platform" ng-model="platformInput" size="1" ng-options="x.value as x.label for x in platformList | orderBy:['label']" ></select><br/>
+				类型: <select name="cat" ng-model="genreInput" ng-options="x.value as x.label for x in categoryList" ></select><br/>
+				时间: <select name="year" ng-model="yearInput" size="1" ng-options="x.value as x.label for x in releaseList" ></select><br/>
+				机种: <select name="platform" ng-model="platformInput" size="1" ng-options="x.value as x.label for x in platformList" ></select><br/>
 				搜索: <input name="keyword" type="text" ng-model="keywordInput" size="20"/>
 				<input type="submit" id="submit" value="Search/Browse" />
 			</form>
@@ -300,12 +317,14 @@
 			何不试试
 				<a href="index.html#/search/v=Final&p=ps2">Final+PS2</a>,
 				<a href="index.html#/search/v=Final&p=xbox360">Final+360</a>,
+				<a href="index.html#/search/v=Saga&g=Role-Playing">名字里带Saga的RPG</a>,
 				<a href="index.html#/search/v=体育">体育</a>,
+				<a href="index.html#/search/v=World%20Cup&g=Sports">世界杯关键字体育类游戏</a>,
 				<a href="index.html#/search/v=360">360</a>,
 				<a href="index.html#/search/v=天天&p=iphone">天天系列手游</a>,
 				<a href="index.html#/search/v=三国">三国</a>,
-				<a href="index.html#/search/v=腾讯&p=iphone&g=动作">腾讯动作手游</a>
-				？<a href="demo.html" target="_blank">(sample)</a>
+				<a href="index.html#/search/v=X&p=iphone&g=Action">名字里带X的动作手游</a>
+				？
 			</p>			
 		</div>
 		<div>
