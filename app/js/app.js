@@ -6,8 +6,6 @@ var gamedbApp = angular.module('gamedbApp', [
   'ngRoute',
   'ngSanitize',
   'btford.markdown',
-  'gamedbAnimations',
-
   'gamedbControllers',
   'gamedbFilters',
   'gamedbServices'
