@@ -336,7 +336,7 @@
 		<div>
 			<!--Body content-->
 			<div id="container2" class="container2">
-				<div ng-repeat="game in games | orderBy:['Name','Platform','Id']" class="item thumbnail {{game.Platform}}"
+				<div ng-repeat="game in games.Games | orderBy:['Name','Platform','Id']" class="item thumbnail {{game.Platform}}"
 					data-id="{{game.Id}}"
 					data-name="{{game.Name}}"
 					data-url="#/games/{{game.UrlName}}"

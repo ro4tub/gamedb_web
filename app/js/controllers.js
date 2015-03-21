@@ -7,9 +7,9 @@ var gamedbControllers = angular.module('gamedbControllers', []);
 gamedbControllers.controller('HomepageCtrl', ['$scope', '$rootScope', '$routeParams', 'Homepage',
   function($scope, $rootScope, $routeParams, Homepage) {
 	  $scope.text = "Hello world!";
-	  $scope.topgrossing = Homepage.query({keyword: 'Final Fantasy', platform: 'ps2'});
-	  $scope.topfree = Homepage.query({keyword: 'Final Fantasy', platform: 'ps3'});
-	  $scope.toppaid = Homepage.query({keyword: 'Zelda', platform: 'gamecube'});
+	  $scope.topgrossing = Homepage.get({keyword: 'Final Fantasy', platform: 'ps2'});
+	  $scope.topfree = Homepage.get({keyword: 'Final Fantasy', platform: 'ps3'});
+	  $scope.toppaid = Homepage.get({keyword: 'Zelda', platform: 'gamecube'});
 
 	$scope.submit = function () {
       //if($scope.keywordInput)
@@ -63,20 +63,20 @@ gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', '$routeP
         // rest查询
         if ( $scope.genreInput != "0") {
 			if ( $scope.platformInput != "0") {
-				$scope.games = GameSearch.query({keyword: $scope.keywordInput, platform: $scope.platformInput, genre: $scope.genreInput});
+				$scope.games = GameSearch.get({keyword: $scope.keywordInput, platform: $scope.platformInput, genre: $scope.genreInput});
 			}
 			else
 			{
-				$scope.games = GameSearch.query({keyword: $scope.keywordInput,                                 genre: $scope.genreInput});
+				$scope.games = GameSearch.get({keyword: $scope.keywordInput,                                 genre: $scope.genreInput});
 			}
 		}
 		else
 		{
 			if ( $scope.platformInput != "0") {
-				$scope.games = GameSearch.query({keyword: $scope.keywordInput, platform: $scope.platformInput });
+				$scope.games = GameSearch.get({keyword: $scope.keywordInput, platform: $scope.platformInput });
 			}
 			else {
-				$scope.games = GameSearch.query({keyword: $scope.keywordInput                                 });
+				$scope.games = GameSearch.get({keyword: $scope.keywordInput                                 });
 			}
 		}
 		

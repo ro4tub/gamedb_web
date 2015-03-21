@@ -58,15 +58,15 @@
 	<hr/>
 	<div>
 	Top Grossing:
-				<a ng-repeat="game in topgrossing | orderBy:['Name','Platform','Id']"
+				<a ng-repeat="game in topgrossing.Games | orderBy:['Name','Platform','Id']"
 					href="#/games/{{game.UrlName}}"><img src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" height="100px"/></a>
 	<hr/>
 	Top Free:
-				<a ng-repeat="game in topfree | orderBy:['Name','Platform','Id']"
+				<a ng-repeat="game in topfree.Games | orderBy:['Name','Platform','Id']"
 					href="#/games/{{game.UrlName}}"><img src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" height="100px"/></a>
 	<hr/>
 	Top Paid:
-				<a ng-repeat="game in toppaid | orderBy:['Name','Platform','Id']"
+				<a ng-repeat="game in toppaid.Games | orderBy:['Name','Platform','Id']"
 					href="#/games/{{game.UrlName}}"><img src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" height="100px"/></a>
 
 	</div>
