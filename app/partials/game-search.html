@@ -5,16 +5,16 @@
 	<div ng-init=
       "categoryList=[
 	  {label:' 任何类型', value:'0'}
-	  ,{label:'Action,动作', value:'Action'}
-	  ,{label:'Action Adventure,动作冒险', value:'Action-Adventure'}
-	  ,{label:'Adventure,冒险解谜', value:'Adventure'}
-	  ,{label:'Casual,休闲益智', value:'Casual'}
-	  ,{label:'Miscellaneous,其他类', value:'Miscellaneous'}
-	  ,{label:'Racing,竞速', value:'Racing'}
-	  ,{label:'Role-Playing,角色扮演', value:'Role-Playing'}
-	  ,{label:'Simulation,模拟', value:'Simulation'}
-	  ,{label:'Sports,体育竞技', value:'Sports'}
-	  ,{label:'Strategy,策略', value:'Strategy'}
+	  ,{label:'Action,动作', value:'1,Action,动作'}
+	  ,{label:'Action Adventure,动作冒险', value:'1,Action-Adventure,动作冒险'}
+	  ,{label:'Adventure,冒险解谜', value:'1,Adventure,冒险解谜'}
+	  ,{label:'Casual,休闲益智', value:'1,Casual,休闲益智'}
+	  ,{label:'Miscellaneous,其他类', value:'1,Miscellaneous,其他类'}
+	  ,{label:'Racing,竞速', value:'1,Racing,竞速'}
+	  ,{label:'Role-Playing,角色扮演', value:'1,Role-Playing,角色扮演'}
+	  ,{label:'Simulation,模拟', value:'1,Simulation,模拟'}
+	  ,{label:'Sports,体育竞技', value:'1,Sports,体育竞技'}
+	  ,{label:'Strategy,策略', value:'1,Strategy,策略'}
       ] ">
 	</div>	
     <!--
@@ -336,6 +336,14 @@
 		<div>
 			<!--Body content-->
 			<div id="container2" class="container2">
+				<div><span ng-repeat="p in games.PlatformOutline | orderBy:['-Count','Key']">
+					<a href="#/search/v={{keywordInput}}&y={{yearInput}}&g={{genreInput}}&p={{p.Key}}">{{p.Key}} : {{p.Count}}</a>
+				</span></div>
+				<div><span ng-repeat="g in games.GenreOutline | orderBy:['-Count','Key']">
+					<a href="#/search/v={{keywordInput}}&y={{yearInput}}&p={{platformInput}}&g={{g.Key}}">{{g.Key}} : {{g.Count}}</a>
+				</span></div>
+			</div>
+			<div id="container2" class="container2">
 				<div ng-repeat="game in games.Games | orderBy:['Name','Platform','Id']" class="item thumbnail {{game.Platform}}"
 					data-id="{{game.Id}}"
 					data-name="{{game.Name}}"
@@ -347,7 +355,6 @@
 					>
 					<div class="title fb fz3 maxwidth250">
 						<a href="#/games/{{game.UrlName}}" class="Encoding_{{game.Encoding?game.Encoding:getEncoding(game.Name)}}" target="_blank">{{game.Name}}</a>
-						
 					</div>
 					<div>
 						<a href="#/games/{{game.UrlName}}" class="thumb" target="_blank" ><img ng-src="http://huangyaoshi.me/gamedb/{{game.Pic}}" alt="{{game.Name}}" onerror="this.src='img/onerror.jpg';"/></a>

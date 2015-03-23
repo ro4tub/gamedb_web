@@ -36,7 +36,7 @@ gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', '$routeP
 			vars.push(hash[0]);
 			vars[hash[0]] = hash[1];
 		}
-		console.log(vars);
+		//console.log(vars);
 	
       $scope.keywordInput	= (vars["v"] != undefined ? vars["v"] : "腾讯");// $routeParams.keyword;  
 	  $scope.platformInput	= (vars["p"] != undefined ? vars["p"] : "0");
