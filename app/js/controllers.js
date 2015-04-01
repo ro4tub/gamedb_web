@@ -135,6 +135,8 @@ gamedbControllers.controller('GameDetailCtrl', ['$scope', '$rootScope', '$routeP
   function($scope, $rootScope, $routeParams, Game) {
     $scope.game = Game.get({gameId: $routeParams.gameId}, function(game) {
 	  	$scope.markdown = game.DetailDesc
+		$("editform").hide()
+		$("#inputDetailDesc").markdown()
 		$rootScope.pageTitle = game.Name
 		if (!game.TAGs) {
 			game.TAGs = $scope.GetRandomTAGs(game);
@@ -197,6 +199,16 @@ gamedbControllers.controller('GameDetailCtrl', ['$scope', '$rootScope', '$routeP
 		} else {
 			return "Regular";
 		}
-	}		
+	}	
+	
+	$scope.toogleEdit = function () {
+		$scope.editable = true
+	}
+	
+	$scope.submit = function () {
+	 {
+		 $scope.game.$save()
+     }
+    }	
   }]);
   
