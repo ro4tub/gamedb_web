@@ -335,13 +335,39 @@
 		</div>
 		<div>
 			<!--Body content-->
-			<div id="container2" class="container2">
-				<div><span ng-repeat="p in games.PlatformOutline | orderBy:['-Count','Key']">
-					<a href="#/search/v={{keywordInput}}&y={{yearInput}}&g={{genreInput}}&p={{p.Key}}">{{p.Key}} : {{p.Count}}</a>
-				</span></div>
-				<div><span ng-repeat="g in games.GenreOutline | orderBy:['-Count','Key']">
-					<a href="#/search/v={{keywordInput}}&y={{yearInput}}&p={{platformInput}}&g={{g.Key}}">{{g.Key}} : {{g.Count}}</a>
-				</span></div>
+			<div>
+				<!--<div>
+					<ul class="system-list-special">
+                             <li class="system PC ">PC</li>
+                             <li class="system X360">X360</li>
+                             <li class="system XONE">XONE</li>
+                             <li class="system PS3">PS3</li>
+                             <li class="system PS4">PS4</li>
+                             <li class="system WIIU">WIIU</li>
+                             <li class="system WII">WII</li>
+                             <li class="system PS3N">PS3N</li>
+                             <li class="system XBLM">XBLM</li>
+                             <li class="system MAC ">MAC</li>
+                             <li class="system more js-unhide-lis">+ 3 more</li>
+                             <li class="system IPHN">IPHN</li>
+                             <li class="system IPAD">IPAD</li>
+                    </ul>			
+				</div>
+				//-->
+				<div>
+					<ul class="system-list-special">
+						<li class="system {{p.Key}}" ng-repeat="p in games.PlatformOutline | orderBy:['-Count','Key']">
+							<a href="#/search/v={{keywordInput}}&y={{yearInput}}&g={{genreInput}}&p={{p.Key}}">{{p.Key}} : {{p.Count}}</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="genre-list">
+						<li class="genre {{g.Key}}" ng-repeat="g in games.GenreOutline | orderBy:['-Count','Key']">
+							<a href="#/search/v={{keywordInput}}&y={{yearInput}}&p={{platformInput}}&g={{g.Key}}">{{g.Key}} : {{g.Count}}</a>
+						</li>
+					</ul>							
+				</div>
 			</div>
 			<div id="container2" class="container2">
 				<div ng-repeat="game in games.Games | orderBy:['Name','Platform','Id']" class="item thumbnail {{game.Platform}}"

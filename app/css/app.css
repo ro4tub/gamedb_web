@@ -1,4 +1,5 @@
 /* app css stylesheet */
+@charset "UTF-8";
 
 body {
   padding: 0px;
@@ -229,3 +230,55 @@ h1 {
   margin: 0.5em 2em 0.5em 0.5em;  
   background: #EEE; 
 }
+
+.genre-list .genre{display:inline-block;padding:0 5px;margin:5px 5px 0 0;border-radius:3px}
+.genre-list li{display:inline-block;
+	border: 1px solid #c2c2c2;
+	background-color: #ffe6e6;
+	margin:5px 5px 0 0;
+}
+.system-list-special .system.1,Action,动作{background-color: #ff0000;}
+
+
+.system-list li{display:inline-block;
+	border: 1px solid #c2c2c2;
+	background-color: #e6e6e6;
+	margin:5px 5px 0 0;
+}
+
+.system-list .system{display:inline-block;padding:0 5px;margin:5px 5px 0 0;border-radius:3px}
+.system-list-small .system{display:inline-block;background:none;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);font-size:12px;padding:0;margin:0;border:0}
+.system-list-special .system{background:none left center no-repeat;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	/*border:0;*/
+	line-height:28px;/*padding:0;margin:0 10px 0 0*/
+	background-color: #e6e6e6;
+}
+
+.system-list-special li{display:inline-block;
+	border: 1px solid #c2c2c2;
+	background-color: #e6e6e6;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system{background-size:24px 24px}}
+.system-list-special .system.X360, .system-list-special .system.xbox360,
+.system-list-special .system.XONE, .system-list-special .system.xboxone,
+.system-list-special .system.PC, .system-list-special .system.pc,
+.system-list-special .system.PS3, .system-list-special .system.ps3,
+.system-list-special .system.PS4, .system-list-special .system.ps4,
+.system-list-special .system.WIIU, .system-list-special .system.wiiu,
+.system-list-special .system.WII, .system-list-special .system.wii,
+.system-list-special .system.PS3N,
+.system-list-special .system.XBLM{padding:0px 0px 0px 30px}
+.system-list-special .system.X360, .system-list-special .system.xbox360{background-image:url(../img/icons/icn-system-xbox360-24x24.png)}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.X360{background-image:url(../img/icons/icn-system-xbox360-48x48.png)}}
+.system-list-special .system.XONE, .system-list-special .system.xboxone{background-image:url(../img/icons/icn-system-xboxone-24x24.png)}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.XONE{background-image:url(../img/icons/icn-system-xboxone-48x48.png)}}
+.system-list-special .system.PC, .system-list-special .system.pc{background-image:url(../img/icons/icn-system-pc-24x24.png)}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.PC{background-image:url(../img/icons/icn-system-pc-48x48.png)}}
+.system-list-special .system.PS3, .system-list-special .system.ps3{background-image:url(../img/icons/icn-system-ps3-24x24.png)}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.PS3{background-image:url(../img/icons/icn-system-ps3-48x48.png)}}
+.system-list-special .system.PS4, .system-list-special .system.ps4{background-image:url(../img/icons/icn-system-ps4-24x24.png)}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.PS4{background-image:url(../img/icons/icn-system-ps4-48x48.png)}}
+.system-list-special .system.WIIU, .system-list-special .system.wiiu{background-image:url(../img/icons/icn-system-wiiu-24x24.png)}
+.system-list-special .system.WII, .system-list-special .system.wii{background-image:url(../img/icons/icn-system-wii-24x24.png)}
+.system-list-special .system.PS3N{background-image:url(../img/icons/icn-system-ps3n-24x24.png)}
+.system-list-special .system.XBLM{background-image:url(../img/icons/icn-system-xblm-24x24.png)}
