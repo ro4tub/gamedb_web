@@ -130,11 +130,11 @@ img.game:first-child {
 }
 
 .item.xbox, .item.xboxone, .item.xbox360 {
-	border-left: 10px solid #5C8F00;
+	border-left: 10px solid #4aa545;
 	background: #CFFB71;
 }
 .item.ps, .item.ps2, .item.ps3, .item.ps4, .item.psp, .item.vita {
-	border-left: 10px solid #000E9D;
+	border-left: 10px solid #2637a6;
 	background: #D6E6FA;
 }
 /*3ds is not a valid class name, so ... ds3*/
@@ -231,15 +231,24 @@ h1 {
   background: #EEE; 
 }
 
+/*
+	genre-list
+*/
 .genre-list .genre{display:inline-block;padding:0 5px;margin:5px 5px 0 0;border-radius:3px}
 .genre-list li{display:inline-block;
 	border: 1px solid #c2c2c2;
 	background-color: #ffe6e6;
 	margin:5px 5px 0 0;
 }
-.system-list-special .system.1,Action,动作{background-color: #ff0000;}
 
 
+/*
+	system-list
+*/
+.system-list-special .system{background-color: #ff0000;
+	padding: 0px 6px 0px 6px;
+	margin: 0px 3px 3px 0px;
+}
 .system-list li{display:inline-block;
 	border: 1px solid #c2c2c2;
 	background-color: #e6e6e6;
@@ -267,18 +276,48 @@ h1 {
 .system-list-special .system.WIIU, .system-list-special .system.wiiu,
 .system-list-special .system.WII, .system-list-special .system.wii,
 .system-list-special .system.PS3N,
-.system-list-special .system.XBLM{padding:0px 0px 0px 30px}
-.system-list-special .system.X360, .system-list-special .system.xbox360{background-image:url(../img/icons/icn-system-xbox360-24x24.png)}
+.system-list-special .system.XBLM{
+	padding:0px 6px 0px 30px;
+}
+.system-list-special .system.X360, .system-list-special .system.xbox360{
+	background-image:url(../img/icons/icn-system-xbox360-24x24.png);
+	background-position: left 3px bottom 2px;
+	border: 1px solid #4aa545;
+	border-left: 10px solid #4aa545;
+	background-color: #CFFB71;
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.X360{background-image:url(../img/icons/icn-system-xbox360-48x48.png)}}
-.system-list-special .system.XONE, .system-list-special .system.xboxone{background-image:url(../img/icons/icn-system-xboxone-24x24.png)}
+.system-list-special .system.XONE, .system-list-special .system.xboxone{
+	background-image:url(../img/icons/icn-system-xboxone-24x24.png);
+	background-position: left 3px bottom 2px;
+	border: 1px solid #4aa545;
+	border-left: 10px solid #4aa545;
+	background-color: #CFFB71;
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.XONE{background-image:url(../img/icons/icn-system-xboxone-48x48.png)}}
 .system-list-special .system.PC, .system-list-special .system.pc{background-image:url(../img/icons/icn-system-pc-24x24.png)}
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.PC{background-image:url(../img/icons/icn-system-pc-48x48.png)}}
-.system-list-special .system.PS3, .system-list-special .system.ps3{background-image:url(../img/icons/icn-system-ps3-24x24.png)}
+.system-list-special .system.PS3, .system-list-special .system.ps3{
+	background-image:url(../img/icons/icn-system-ps3-24x24.png);
+	background-position: left 3px bottom 2px;
+	border: 1px solid #2637a6;
+	border-left: 10px solid #2637a6;
+	background-color: #D6E6FA;
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.PS3{background-image:url(../img/icons/icn-system-ps3-48x48.png)}}
-.system-list-special .system.PS4, .system-list-special .system.ps4{background-image:url(../img/icons/icn-system-ps4-24x24.png)}
+.system-list-special .system.PS4, .system-list-special .system.ps4{
+	background-image:url(../img/icons/icn-system-ps4-24x24.png);
+	background-position: left 3px bottom 2px;
+	border: 1px solid #2637a6;
+	border-left: 10px solid #2637a6;
+	background-color: #D6E6FA;
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.system-list-special .system.PS4{background-image:url(../img/icons/icn-system-ps4-48x48.png)}}
-.system-list-special .system.WIIU, .system-list-special .system.wiiu{background-image:url(../img/icons/icn-system-wiiu-24x24.png)}
-.system-list-special .system.WII, .system-list-special .system.wii{background-image:url(../img/icons/icn-system-wii-24x24.png)}
+.system-list-special .system.WIIU, .system-list-special .system.wiiu{background-image:url(../img/icons/icn-system-wiiu-24x24.png);
+	border-left: 10px solid #CBCAC6;
+}
+.system-list-special .system.WII, .system-list-special .system.wii{background-image:url(../img/icons/icn-system-wii-24x24.png);
+	border-left: 10px solid #CBCAC6;
+}
 .system-list-special .system.PS3N{background-image:url(../img/icons/icn-system-ps3n-24x24.png)}
 .system-list-special .system.XBLM{background-image:url(../img/icons/icn-system-xblm-24x24.png)}
