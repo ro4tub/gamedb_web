@@ -24,6 +24,7 @@ gamedbControllers.controller('GameSearchCtrl', ['$scope', '$rootScope', '$routeP
     $scope.games = [];
 	
     $scope.keywordInput = "腾讯";  //default value
+	$scope.tagInput = "VR";
 	$scope.platformInput = "0";
 	$scope.yearInput = "0"; // at any time
 	$scope.genreInput = "0";

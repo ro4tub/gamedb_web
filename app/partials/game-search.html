@@ -300,6 +300,7 @@
 	  ,{label:'Ouya', value:'ouya'}
 	  ,{label:'Saturn', value:'saturn'}
 	  ,{label:'Sega CD', value:'segacd'}
+	  ,{label:'Smart Toy 智能玩具', value:'smarttoy'}
       ] ">
 	</div>
 	
@@ -310,6 +311,7 @@
 				类型: <select name="cat" ng-model="genreInput" ng-options="x.value as x.label for x in categoryList" ></select><br/>
 				时间: <select name="year" ng-model="yearInput" size="1" ng-options="x.value as x.label for x in releaseList" ></select><br/>
 				机种: <select name="platform" ng-model="platformInput" size="1" ng-options="x.value as x.label for x in platformList" ></select><br/>
+				TAG: <input name="tag" type="text" ng-model="tagInput" size="20"/><br/>
 				搜索: <input name="keyword" type="text" ng-model="keywordInput" size="20"/>
 				<input type="submit" id="submit" value="Search/Browse" />
 			</form>
@@ -317,6 +319,8 @@
 			何不试试
 				<a href="index.html#/search/v=腾讯&p=iphone&g=Action">腾讯动作手游</a>,
 				<a href="index.html#/search/v=腾讯&p=iphone&g=Casual">腾讯休闲益智手游</a>,
+				<a href="index.html#/search/v=VR">VR体验</a>,
+				<a href="index.html#/search/p=smarttoy">智能玩具</a>,
 				<a href="index.html#/search/v=首发&p=xboxone">XboxOne首发</a>,
 				<a href="index.html#/search/v=首发&p=ps4">PS4首发</a>,
 				<a href="index.html#/search/v=首发&p=vita">PS Vita首发</a>,
